@@ -1,6 +1,0 @@
-baseURL = "https://adnajah.com/"
-languageCode = "en-us"
-title = "My New Hugo Project"
-
-[params]
-test = "Hello world where are you"
