@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/adnajah/categories/</loc>
+    <loc>https://ahmedsharifkhan.github.io/adnajah/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/adnajah/tags/</loc>
+    <loc>https://ahmedsharifkhan.github.io/adnajah/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/adnajah/</loc>
+    <loc>https://ahmedsharifkhan.github.io/adnajah/</loc>
   </url>
 </urlset>
