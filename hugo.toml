@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+=======
+baseURL = "https://adnajah.com/"
+languageCode = "en-us"
+title = "AdNajah"
+>>>>>>> d7bf17e2ea8b7089fbfa99646d248c9a44cd97ce
