@@ -1,0 +1,24 @@
+social:
+- icon: fab fa-facebook-f
+  link: https://www.facebook.com/adsnajah
+
+# - icon: fab fa-twitter
+#   link: https://twitter.com
+
+- icon: fab fa-whatsapp
+  link: https://wa.me/8801310994358
+
+
+- icon: fab fa-linkedin-in
+  link: https://www.linkedin.com/company/ad-najah
+
+- icon: fab fa-instagram
+  link: https://www.instagram.com/adsnajah
+
+# - icon: fab fa-youtube
+#   link: https://youtube.com
+
+
+contact:
+  phone: "+6108-666-0112"
+  email: "info@gmail.com"

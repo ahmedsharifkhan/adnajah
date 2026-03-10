@@ -11,8 +11,8 @@
             <div class="main-header__inner">
                 <div class="main-header__logo">
                     <a href="{{ "/" | relURL }}">
-                    
-                        <img src="{{ "assets/images/brand logo.png" | relURL }}" alt="Growim" width="160">
+
+                        <img src="{{ "assets/images/black logo.png" | relURL }}" alt="Growim" width="160">
                         <img src="{{ "assets/images/white logo.png" | relURL }}" alt="Growim" width="160">
                     </a>
                 </div>
@@ -21,30 +21,30 @@
                 <nav class="main-header__nav main-menu">
                     <ul class="main-menu__list">
 
-                       <li>
-<a href="{{ "/" | relURL }}">Home</a>
-</li>
 
-<li>
-<a href="{{ "about" | relURL }}">About</a>
-</li>
+                        <li class="{{ if eq .RelPermalink "/" }}current{{ end }}">
+                            <a href="{{ "/" | relURL }}">Home</a>
+                        </li>
 
-<li>
-<a href="{{ "services" | relURL }}">Services</a>
-</li>
+                        <li class="{{ if eq .RelPermalink "/about/" }}current{{ end }}">
+                            <a href="{{ "/about/" | relURL }}">About</a>
+                        </li>
 
-<li>
-<a href="{{ "portfolio" | relURL }}">Portfolio</a>
-</li>
+                        <li class="{{ if eq .RelPermalink "/services/" }}current{{ end }}">
+                            <a href="{{ "/services/" | relURL }}">Services</a>
+                        </li>
 
-<li>
-<a href="{{ "contact" | relURL }}">Contact</a>
-</li>
+                        <li class="{{ if eq .RelPermalink "/portfolio/" }}current{{ end }}">
+                            <a href="{{ "/portfolio/" | relURL }}">Portfolio</a>
+                        </li>
 
+                        <li class="{{ if eq .RelPermalink "/contact/" }}current{{ end }}">
+                            <a href="{{ "/contact/" | relURL }}">Contact</a>
+                        </li>
 
                     </ul>
                 </nav>
-                
+
                 <!-- /.main-header__nav -->
                 <div class="main-header__right">
                     <div class="mobile-nav__btn mobile-nav__toggler">
@@ -52,7 +52,7 @@
                         <span></span>
                         <span></span>
                     </div>
-                    
+
                     <!-- /.mobile-nav__toggler -->
                     <!-- <a href="#" class="search-toggler main-header__search">
                         <i class="flaticon-search" aria-hidden="true"></i>
@@ -66,9 +66,9 @@
                         <span class="sr-only">Search</span>
 
                     </a> -->
-                    
+
                     <!-- /.search-toggler -->
-                    <a href="{{ "contact" | relURL }}" class="growim-btn growim-btn--white main-header__btn">
+                    <a href="{{ " contact" | relURL }}" class="growim-btn growim-btn--white main-header__btn">
                         <span class="growim-btn__text">Start A Project</span>
                     </a><!-- /.thm-btn main-header__btn -->
                 </div><!-- /.main-header__right -->

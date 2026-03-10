@@ -1,0 +1,179 @@
+<div class="custom-cursor__cursor"></div>
+<div class="custom-cursor__cursor-two"></div>
+
+<div class="preloader">
+    <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
+</div>
+<!-- /.preloader -->
+<div class="page-wrapper">
+    <header class="main-header main-header--five sticky-header sticky-header--normal">
+        <div class="container-fluid">
+            <div class="main-header--five__inner">
+                <div class="topbar">
+                    <!-- <ul class="list-unstyled topbar__info">
+
+                        <li class="topbar__info__item">
+                            <span class="topbar__info__icon"><i class="flaticon-phone"></i></span>
+                            <a href="tel:+61086660112">+6108-666-0112</a>
+                        </li>
+                        <li class="topbar__info__item">
+                            <span class="topbar__info__icon"><i class="flaticon-email"></i></span>
+                            <a href="mailto:info@gmail.com">info@gmail.com</a>
+                        </li>
+                    </ul> -->
+
+                    <ul class="list-unstyled topbar__info">
+
+<li class="topbar__info__item">
+<span class="topbar__info__icon">
+<i class="flaticon-phone"></i>
+</span>
+
+<a href="tel:{{ .Site.Data.social.contact.phone }}">
+{{ .Site.Data.social.contact.phone }}
+</a>
+
+</li>
+
+<li class="topbar__info__item">
+<span class="topbar__info__icon">
+<i class="flaticon-email"></i>
+</span>
+
+<a href="mailto:{{ .Site.Data.social.contact.email }}">
+{{ .Site.Data.social.contact.email }}
+</a>
+
+</li>
+
+</ul>
+
+                    <!-- /.list-unstyled topbar-one__info -->
+                   
+                    <!-- <div class="topbar__social">
+                        <a href="https://facebook.com">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                        <a href="https://twitter.com">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a href="https://instagram.com">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                        <a href="https://www.youtube.com/">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                            <span class="sr-only">Youtube</span>
+                        </a>
+                    </div>  -->
+
+                   <div class="topbar__social">
+
+{{ range .Site.Data.social.social }}
+
+<a href="{{ .link }}">
+<i class="{{ .icon }}"></i>
+<span class="sr-only">social</span>
+</a>
+
+{{ end }}
+
+</div>
+
+                    <!-- /.topbar__social -->
+
+
+                </div>
+                <div class="main-header__inner">
+                    <div class="main-header__logo">
+                        <a href="{{ "/" | relURL }}">
+                            <img src="{{ "assets/images/icon b black.png" | relURL }}" alt="Ad Najah" width="160">
+                        </a>
+                    </div><!-- /.main-header__logo -->
+                    <nav class="main-header__nav main-menu">
+                        <ul class="main-menu__list">
+
+
+                            <li>
+                                <a href="{{ "/" | relURL }}" style="{{ if eq .RelPermalink "/"
+                                    }}color:#00000;font-weight:600;{{ end }}">
+                                    Home
+                                </a>
+                            </li>
+
+
+
+                            <li>
+                                <a href="{{ "/about/" | relURL }}" style="{{ if eq .RelPermalink "/about/"
+                                    }}color:#6c4df6;font-weight:600;{{ end }}">
+                                    About
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ "/services/" | relURL }}" style="{{ if eq .RelPermalink "/services/"
+                                    }}color:#6c4df6;font-weight:600;{{ end }}">
+                                    Services
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ "/portfolio/" | relURL }}" style="{{ if eq .RelPermalink "/portfolio/"
+                                    }}color:#6c4df6;font-weight:600;{{ end }}">
+                                    Portfolio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ "/contact/" | relURL }}" style="{{ if eq .RelPermalink "/contact/"
+                                    }}color:#6c4df6;font-weight:600;{{ end }}">
+                                    Contact
+                                </a>
+                            </li>
+
+
+
+
+
+                        </ul>
+
+
+
+
+
+
+
+
+                    </nav><!-- /.main-header__nav -->
+                    <div class="main-header__right">
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <!-- /.mobile-nav__toggler -->
+
+
+                        <!-- /.search-toggler -->
+
+
+                        <!-- /.search-toggler -->
+                        <a href="{{ " contact" | relURL }}" class="growim-btn main-header__btn">
+                            <span class="growim-btn__text">Work With Us</span>
+                        </a>
+
+                        <!-- /.main-header__btn -->
+                    </div>
+
+                    <!-- /.main-header__right -->
+                </div>
+
+                <!-- /.main-header__inner -->
+            </div>
+        </div>
+
+        <!-- /.container-fluid -->
+    </header>
