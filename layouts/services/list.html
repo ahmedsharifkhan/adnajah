@@ -20,24 +20,24 @@
         <div class="row gutter-y-30">
 
             <!-- list of services here -->
-             
+             {{ range first 6 .RegularPages }}
             <div class="col-lg-4 col-md-6">
                 <div class="service-six__item text-center">
                     <div class="service-six__item__wrapper">
                         <div class="service-six__item__image">
-                            <img src="{{ "assets/images/resources/service-6-2.jpg" | relURL }}" alt="growim">
+                            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
                         </div>
                         <div class="service-six__item__icon"
-                            style="background-image: url({{ "assets/images/shapes/service-6-icon-bg.png" | relURL }});">
-                            <img src="{{ "assets/images/shapes/service-6-1.png" | relURL }}" alt="growim">
+                            style="background-image: url({{ .Params.icon_bg | relURL }});">
+                            <img src="{{ .Params.icon | relURL }}" alt="{{ .Title }}">
                         </div><!-- /.service-icon -->
                         <h3 class="service-six__item__title">
-                            <a href="service-details.html">Link Building Optimization</a>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                         </h3><!-- /.service-title -->
                         <p class="service-six__item__text">
-                            We can help you & routine audits to determine an SEO
+                            {{ .Params.description }}
                         </p><!-- /.service-text -->
-                        <a class="service-six__item__rm" href="service-details.html">
+                        <a class="service-six__item__rm" href="{{ .RelPermalink }}">
                             <svg viewBox="0 0 58 66" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M25.46 1.07519C27.646 -0.206291 30.354 -0.206292 32.54 1.07519L54.54 13.9717C56.6833 15.2281 58 17.5263 58 20.0106V45.9894C58 48.4737 56.6833 50.7719 54.54 52.0283L32.54 64.9248C30.354 66.2063 27.646 66.2063 25.46 64.9248L3.45996 52.0283C1.31675 50.7719 0 48.4737 0 45.9894V20.0106C0 17.5263 1.31675 15.2281 3.45996 13.9717L25.46 1.07519Z" />
@@ -48,10 +48,10 @@
                 </div>
             </div>
 
-
+{{ end }}
        
 
-{{ range first 6 .RegularPages }}
+ <!-- {{ range first 6 .RegularPages }}
 
 <div class="col-lg-4 col-md-6">
     <div class="service-six__item text-center">
@@ -62,7 +62,7 @@
             </div>
 
             <div class="service-six__item__icon"
-                style="background-image: url({{ "assets/images/shapes/service-6-icon-bg.png" | relURL }});">
+                style="background-image: url({{ .Params.icon_bg | relURL }});">
                 <img src="{{ .Params.icon | relURL }}" alt="{{ .Title }}">
             </div>
 
@@ -85,8 +85,8 @@
     </div>
 </div>
 
-{{ end }}
-          
+{{ end }} 
+           -->
 
 
 

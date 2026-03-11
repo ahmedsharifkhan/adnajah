@@ -1,7 +1,3 @@
 ---
-title: "Home"
+title: "Services"
 ---
-
-# Welcome
-
-This is AdNajah website.
