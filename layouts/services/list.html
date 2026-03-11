@@ -1,0 +1,274 @@
+{{ define "main" }}
+
+
+
+{{ partial "navbarall.html" . }}
+
+
+<div class="container">
+    <h2 class="page-header__title">Our Service</h2>
+    <ul class="growim-breadcrumb list-unstyled">
+        <li><a href="index.html">Home</a></li>
+        <li><span>Our Service</span></li>
+    </ul><!-- /.thm-breadcrumb list-unstyled -->
+</div><!-- /.container -->
+</section><!-- /.page-header -->
+
+<!-- Service Start -->
+<section class="service-six">
+    <div class="container">
+        <div class="row gutter-y-30">
+
+            <!-- list of services here -->
+             
+            <div class="col-lg-4 col-md-6">
+                <div class="service-six__item text-center">
+                    <div class="service-six__item__wrapper">
+                        <div class="service-six__item__image">
+                            <img src="{{ "assets/images/resources/service-6-2.jpg" | relURL }}" alt="growim">
+                        </div>
+                        <div class="service-six__item__icon"
+                            style="background-image: url({{ "assets/images/shapes/service-6-icon-bg.png" | relURL }});">
+                            <img src="{{ "assets/images/shapes/service-6-1.png" | relURL }}" alt="growim">
+                        </div><!-- /.service-icon -->
+                        <h3 class="service-six__item__title">
+                            <a href="service-details.html">Link Building Optimization</a>
+                        </h3><!-- /.service-title -->
+                        <p class="service-six__item__text">
+                            We can help you & routine audits to determine an SEO
+                        </p><!-- /.service-text -->
+                        <a class="service-six__item__rm" href="service-details.html">
+                            <svg viewBox="0 0 58 66" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M25.46 1.07519C27.646 -0.206291 30.354 -0.206292 32.54 1.07519L54.54 13.9717C56.6833 15.2281 58 17.5263 58 20.0106V45.9894C58 48.4737 56.6833 50.7719 54.54 52.0283L32.54 64.9248C30.354 66.2063 27.646 66.2063 25.46 64.9248L3.45996 52.0283C1.31675 50.7719 0 48.4737 0 45.9894V20.0106C0 17.5263 1.31675 15.2281 3.45996 13.9717L25.46 1.07519Z" />
+                            </svg>
+                            <i class="flaticon-up-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+       
+
+{{ range first 6 .RegularPages }}
+
+<div class="col-lg-4 col-md-6">
+    <div class="service-six__item text-center">
+        <div class="service-six__item__wrapper">
+
+            <div class="service-six__item__image">
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+            </div>
+
+            <div class="service-six__item__icon"
+                style="background-image: url({{ "assets/images/shapes/service-6-icon-bg.png" | relURL }});">
+                <img src="{{ .Params.icon | relURL }}" alt="{{ .Title }}">
+            </div>
+
+            <h3 class="service-six__item__title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+
+            <p class="service-six__item__text">
+                {{ .Params.description }}
+            </p>
+
+            <a class="service-six__item__rm" href="{{ .RelPermalink }}">
+                <svg viewBox="0 0 58 66" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.46 1.07519C27.646 -0.206291 30.354 -0.206292 32.54 1.07519L54.54 13.9717C56.6833 15.2281 58 17.5263 58 20.0106V45.9894C58 48.4737 56.6833 50.7719 54.54 52.0283L32.54 64.9248C30.354 66.2063 27.646 66.2063 25.46 64.9248L3.45996 52.0283C1.31675 50.7719 0 48.4737 0 45.9894V20.0106C0 17.5263 1.31675 15.2281 3.45996 13.9717L25.46 1.07519Z"/>
+                </svg>
+                <i class="flaticon-up-right-arrow"></i>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+{{ end }}
+          
+
+
+
+            <!-- /.service-card-one -->
+        </div>
+
+        <!-- /.item -->
+
+    </div>
+    </div>
+</section>
+<!-- Service End -->
+
+<section class="work-process-two" style="background-image: url(assets/images/shapes/work-process-two-bg-shape.png);">
+    <div class="container">
+        <div class="work-process-two__top">
+            <div class="sec-title text-center">
+
+                <h6 class="sec-title__tagline">Work Process</h6><!-- /.sec-title__tagline -->
+
+                <h3 class="sec-title__title">Our Working Pocess</h3><!-- /.sec-title__title -->
+            </div><!-- /.sec-title -->
+        </div>
+        <div class="row gutter-y-30">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="00ms">
+                <div class="work-process-two__item">
+                    <div class="work-process-two__item__icon">
+                        <i class="flaticon-service"></i>
+                        <div class="work-process-two__item__number"></div>
+                    </div>
+                    <h3 class="work-process-two__item__title">Choose A Service</h3>
+                    <p class="work-process-two__item__text">
+                        In a free hour, when our power of choice is untrammeled and
+                    </p>
+                </div>
+            </div><!-- item -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                <div class="work-process-two__item work-process-two__item--reverse">
+                    <h3 class="work-process-two__item__title">Define Requirements</h3>
+                    <p class="work-process-two__item__text">
+                        In a free hour, when our power of choice is untrammeled and
+                    </p>
+                    <div class="work-process-two__item__icon">
+                        <i class="flaticon-define"></i>
+                        <div class="work-process-two__item__number"></div>
+                    </div>
+                </div>
+            </div><!-- item -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                <div class="work-process-two__item">
+                    <div class="work-process-two__item__icon">
+                        <i class="flaticon-team"></i>
+                        <div class="work-process-two__item__number"></div>
+                    </div>
+                    <h3 class="work-process-two__item__title">Request A Meeting</h3>
+                    <p class="work-process-two__item__text">
+                        In a free hour, when our power of choice is untrammeled and
+                    </p>
+                </div>
+            </div><!-- item -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                <div class="work-process-two__item work-process-two__item--reverse">
+                    <h3 class="work-process-two__item__title">Final Solution</h3>
+                    <p class="work-process-two__item__text">
+                        In a free hour, when our power of choice is untrammeled and
+                    </p>
+                    <div class="work-process-two__item__icon">
+                        <i class="flaticon-solution"></i>
+                        <div class="work-process-two__item__number"></div>
+                    </div>
+                </div>
+            </div><!-- item -->
+        </div>
+        <div class="work-process-two__border wow fadeInUp" data-wow-delay="400ms"
+            style="background-image: url(assets/images/shapes/work-process-two-border.png);"></div>
+    </div>
+</section><!-- work-process-two -->
+
+<section class="testimonials-one testimonials-one--service-page">
+    <div class="testimonials-one__shape-one"
+        style="background-image: url(assets/images/shapes/testimonials-1-shape-1.png);"></div>
+    <div class="testimonials-one__shape-two"
+        style="background-image: url(assets/images/shapes/testimonials-1-shape-2.png);"></div>
+    <div class="testimonials-one__shape-three"
+        style="background-image: url(assets/images/shapes/testimonials-1-shape-3.png);"></div>
+    <div class="testimonials-one__shape-four"
+        style="background-image: url(assets/images/shapes/testimonials-1-shape-4.png);"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                <div class="testimonials-one__image">
+                    <div class="testimonials-one__image__bg"
+                        style="background-image: url(assets/images/shapes/testimonial-1-image-bg.png);"></div>
+                    <img src="assets/images/resources/testimonial-1-image.png" alt="growim">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="testimonials-one__area">
+                    <div class="sec-title text-left">
+
+                        <h6 class="sec-title__tagline">Testimonials</h6><!-- /.sec-title__tagline -->
+
+                        <h3 class="sec-title__title">Our Services Solve Any</h3><!-- /.sec-title__title -->
+                    </div><!-- /.sec-title -->
+                    <div class="testimonials-one__carousel growim-owl__carousel owl-carousel" data-owl-options='{
+							"items": 1,
+							"margin": 0,
+							"loop": false,
+							"smartSpeed": 700,
+							"nav": false,
+							"navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+							"dots": false,
+							"autoplay": true
+						}'>
+                        <div class="item">
+                            <div class="testimonials-one__item">
+                                <div class="testimonials-one__item__rating">
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                </div><!-- /.testimonials-one__item__rating -->
+                                <div class="testimonials-one__item__content">
+                                    Sed ante elit, fringilla vitae laoreet sit amet, tempus et libero. Lorem
+                                    ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Fusce eget quam quis turpis lacinia euismod
+                                    cursus in arcu.
+                                    Integer a purus dolor. Pellentesque finibus ut erat in sagittis. Sed semper
+                                    dignissim
+                                </div><!-- /.testimonials-one__item__content -->
+                                <div class="testimonials-one__item__author">
+                                    <img src="assets/images/resources/testi-1-1.jpg" alt="growim">
+                                    <h3 class="testimonials-one__item__name">
+                                        Ronald Richards
+                                    </h3>
+                                    <p class="testimonials-one__item__designation">Co, Founder</p>
+                                </div><!-- /.testimonials-one__item__author -->
+                                <div class="testimonials-one__item__quote"><i class="flaticon-quote"></i></div>
+                                <!-- /.testimonials-one__item__quote -->
+                            </div>
+                        </div><!-- item -->
+                        <div class="item">
+                            <div class="testimonials-one__item">
+                                <div class="testimonials-one__item__rating">
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                    <i class="flaticon-star"></i>
+                                </div><!-- /.testimonials-one__item__rating -->
+                                <div class="testimonials-one__item__content">
+                                    Sed ante elit, fringilla vitae laoreet sit amet, tempus et libero. Lorem
+                                    ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Fusce eget quam quis turpis lacinia euismod
+                                    cursus in arcu.
+                                    Integer a purus dolor. Pellentesque finibus ut erat in sagittis. Sed semper
+                                    dignissim
+                                </div><!-- /.testimonials-one__item__content -->
+                                <div class="testimonials-one__item__author">
+                                    <img src="assets/images/resources/testi-1-1.jpg" alt="growim">
+                                    <h3 class="testimonials-one__item__name">
+                                        Ronald Richards
+                                    </h3>
+                                    <p class="testimonials-one__item__designation">Co, Founder</p>
+                                </div><!-- /.testimonials-one__item__author -->
+                                <div class="testimonials-one__item__quote"><i class="flaticon-quote"></i></div>
+                                <!-- /.testimonials-one__item__quote -->
+                            </div>
+                        </div><!-- item -->
+                    </div><!-- /.testimonials-one__carousel -->
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</section><!-- /.testimonials-one -->
+
+
+{{ partial "footer.html" . }}
+
+
+{{ partial "js.html" . }}
+
+
+{{ end }}

@@ -3,3 +3,10 @@ baseURL = "https://adnajah.com/"
 languageCode = "en-us"
 title = "AdNajah"
 
+[[menu.main]]
+name = "Services"
+url = "/services/"
+weight = 3
+
+[permalinks]
+services = "/services/:slug/"
