@@ -10,3 +10,16 @@ weight = 3
 
 [permalinks]
 services = "/services/:slug/"
+
+
+
+[params.tracking]
+
+# Google Tag Manager
+gtm = "GTM-PRSMLLBB"
+
+# Google Analytics 4
+ga4 = ""
+
+# Facebook Pixel
+facebook_pixel = ""
