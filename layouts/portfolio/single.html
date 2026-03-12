@@ -1,0 +1,129 @@
+{{ define "main" }}
+
+{{ partial "navbarall.html" . }}
+
+<section class="page-header page-header--details">
+    <div class="page-header__bg"></div>
+
+    <div class="container">
+
+        <h2 class="page-header__title">{{ .Title }}</h2>
+
+        <ul class="growim-breadcrumb list-unstyled">
+            <li><a href="/">Home</a></li>
+            <li><a href="/portfolio/">Portfolio</a></li>
+            <li><span>{{ .Title }}</span></li>
+        </ul>
+
+    </div>
+</section>
+
+
+<section class="portfolio-details">
+
+<div class="container">
+
+<div class="portfolio-details__image">
+<img src="{{ .Params.imgsingle | relURL }}" alt="{{ .Title }}">
+</div>
+
+<div class="row">
+
+<div class="col-lg-8">
+
+<div class="portfolio-details__content">
+
+<h3 class="portfolio-details__title">{{ .Title }}</h3>
+
+<p class="portfolio-details__text">
+{{ .Content }}
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-4">
+
+<div class="portfolio-details__info">
+
+<h3 class="portfolio-details__info__title">Project Information</h3>
+
+<ul class="portfolio-details__info__list">
+
+<li>
+<span>Client:</span>
+{{ .Params.client }}
+</li>
+
+<li>
+<span>Category:</span>
+{{ .Params.category }}
+</li>
+
+<li>
+<span>Start Date:</span>
+{{ .Params.start_date }}
+</li>
+
+<li>
+<span>End Date:</span>
+{{ .Params.end_date }}
+</li>
+
+<li>
+<span>Project Budget:</span>
+{{ .Params.budget }}
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Pagination -->
+<div class="portfolio-details__pagination">
+
+{{ with .PrevInSection }}
+
+<a class="portfolio-details__pagination__item" href="{{ .RelPermalink }}">
+
+<img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}">
+
+Previous
+
+</a>
+
+{{ end }}
+
+
+
+{{ with .NextInSection }}
+
+<a class="portfolio-details__pagination__item" href="{{ .RelPermalink }}">
+
+Next
+
+<img src="{{ .Params.imagelist| relURL }}" alt="{{ .Title }}">
+
+</a>
+
+{{ end }}
+
+</div>
+
+
+</div>
+
+</section>
+
+{{ partial "footer.html" . }}
+
+{{ partial "js.html" . }}
+
+{{ end }}

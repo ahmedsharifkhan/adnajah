@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+{{ partial "navbarall.html" . }}
+
+
+
+<section class="page-header">
+    <div class="page-header__bg"></div>
+
+    <div class="container">
+        <h2 class="page-header__title">Our Portfolio</h2>
+
+        <ul class="growim-breadcrumb list-unstyled">
+            <li><a href="/">Home</a></li>
+            <li><span>Our Portfolio</span></li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="portfolio-six">
+<div class="container">
+
+<div class="row gutter-y-30 masonry-layout">
+
+{{ range first site.Params.portfolio_limit (sort .Pages "Date" "desc") }}
+
+<div class="col-lg-6">
+
+<div class="portfolio-six__item">
+
+<img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}">
+
+<div class="portfolio-six__item__content">
+
+<h3 class="portfolio-six__item__title">
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</h3>
+
+<h5 class="portfolio-six__item__cate">
+{{ .Params.category }}
+</h5>
+
+<div class="portfolio-six__item__btn">
+<a href="{{ .RelPermalink }}">
+<i class="flaticon-up-right-arrow"></i>
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{{ end }}
+
+</div>
+
+</div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ partial "js.html" . }}
+
+{{ end }}

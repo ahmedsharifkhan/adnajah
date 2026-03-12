@@ -11,6 +11,13 @@ weight = 3
 [permalinks]
 services = "/services/:slug/"
 
+[[menu.main]]
+name = "Portfolio"
+url = "/portfolio/"
+weight = 4
+
+[params]
+portfolio_limit = 20
 
 
 [params.tracking]
