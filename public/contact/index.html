@@ -345,8 +345,12 @@ adsnajah@gmail.com
     </div>
 </div>
 
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    window.dataLayer = window.dataLayer || [];
+
     const form = document.getElementById("contactForm");
     const status = document.getElementById("formStatus");
     const submitBtn = document.getElementById("submitBtn");
@@ -354,6 +358,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!form) return;
 
     const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdxxAKNsZXA4Qk0vulwXW6kH1mrwOLgAjJes0I-4HLBDg7ifg/formResponse";
+
+    function pushLeadEvent(eventName, extra = {}) {
+        window.dataLayer.push({
+            event: eventName,
+
+            
+            form_id: "contactForm",
+            form_name: "Contact Form",
+            form_status: extra.form_status || "",
+            submission_method: "google_form_no_cors",
+            page_path: window.location.pathname,
+            page_location: window.location.href,
+            page_title: document.title
+
+            
+            
+        });
+    }
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -373,10 +395,6 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("entry.2070069929", document.getElementById("business_name").value.trim());
         formData.append("entry.1467122168", document.getElementById("number").value.trim());
 
-        
-        
-        
-
         fetch(GOOGLE_FORM_URL, {
             method: "POST",
             mode: "no-cors",
@@ -384,10 +402,21 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(function () {
             status.innerText = "Message sent successfully.";
+
+            
+            pushLeadEvent("lead_submit_success", {
+                form_status: "sent"
+            });
+
             form.reset();
         })
         .catch(function () {
             status.innerText = "Something went wrong.";
+
+            
+            pushLeadEvent("lead_submit_error", {
+                form_status: "failed"
+            });
         })
         .finally(function () {
             submitBtn.disabled = false;
