@@ -4,7 +4,17 @@
 
         {{ partial "navbarall.html" . }}
 
-    
+      <section class="page-header">
+            <div class="page-header__bg"></div>
+            <!-- /.page-header__bg -->
+            <div class="container">
+                <h2 class="page-header__title">Contact Us</h2>
+                <ul class="growim-breadcrumb list-unstyled">
+                    <li><a href="{{ "/" | relURL }}">Home</a></li>
+                    <li><span>Contact Us</span></li>
+                </ul><!-- /.thm-breadcrumb list-unstyled -->
+            </div><!-- /.container -->
+        </section><!-- /.page-header -->
 
         <section class="contact-two">
             <div class="container">
@@ -23,29 +33,10 @@
                     </div>
                     
                     <!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="contact-two__content">
-                            <h3 class="contact-two__title">We'll respond to you in an hour.</h3>
-                            <p class="contact-two__text">Neque porro est qui dolorem ipsum quia quaed inventor veritatis et</p>
-                            <form class="contact-two__form contact-form-validated form-one wow fadeInUp" data-wow-duration="1500ms" action="inc/sendemail.php">
-                                <h4 class="contact-two__form__title">Get In touch</h4>
-                                <div class="form-one__group">
-                                    <div class="form-one__control">
-                                        <input type="text" name="name" placeholder="Name">
-                                    </div><!-- /.form-one__control -->
-                                    <div class="form-one__control">
-                                        <input type="email" name="email" placeholder="Email Address">
-                                    </div><!-- /.form-one__control -->
-                                    <div class="form-one__control form-one__control--full">
-                                        <textarea name="message" placeholder="Write Message . . ."></textarea><!-- /# -->
-                                    </div><!-- /.form-one__control -->
-                                    <div class="form-one__control form-one__control--full">
-                                        <button class="growim-btn" type="submit"><span class="growim-btn__text">Send Message</span><span class="growim-btn__icon"><i class="flaticon-up-right-arrow"></i></span></button>
-                                    </div><!-- /.form-one__control -->
-                                </div><!-- /.form-one__group -->
-                            </form>
-                        </div>
-                    </div><!-- /.col-lg-6 -->
+                    
+
+                    {{ partial "form.html" . }}
+                    <!-- /.col-lg-6 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.contact-two -->

@@ -1,0 +1,94 @@
+<div class="col-lg-6">
+    <div class="contact-two__content">
+        <h3 class="contact-two__title">We'll respond to you in an hour.</h3>
+        <p class="contact-two__text">Neque porro est qui dolorem ipsum quia quaed inventor veritatis et</p>
+
+        <form id="contactForm" class="contact-two__form form-one">
+            <h4 class="contact-two__form__title">Get In touch</h4>
+
+            <div class="form-one__group">
+                <div class="form-one__control">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                </div>
+
+                <div class="form-one__control">
+                    <input type="text" name="business_name" id="business_name" placeholder="Business Name" required>
+                </div>
+
+                <div class="form-one__control">
+                    <input type="tel" name="number" id="number" placeholder="Phone Number" required>
+                </div>
+
+                <div class="form-one__control">
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-one__control form-one__control--full">
+                    <textarea name="message" id="message" placeholder="Write Message . . ." required></textarea>
+                </div>
+
+                <div class="form-one__control form-one__control--full">
+                    <button class="growim-btn" id="submitBtn" type="submit">
+                        <span class="growim-btn__text">Send Message</span>
+                        <span class="growim-btn__icon"><i class="flaticon-up-right-arrow"></i></span>
+                    </button>
+                </div>
+
+                <div class="form-one__control form-one__control--full">
+                    <p id="formStatus" style="margin-top:10px;"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
+
+    if (!form) return;
+
+    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdxxAKNsZXA4Qk0vulwXW6kH1mrwOLgAjJes0I-4HLBDg7ifg/formResponse";
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        submitBtn.disabled = true;
+        status.innerText = "Sending...";
+
+        const formData = new FormData();
+        formData.append("entry.1035647491", document.getElementById("name").value.trim());
+        formData.append("entry.1361753555", document.getElementById("email").value.trim());
+        formData.append("entry.566211932", document.getElementById("message").value.trim());
+        formData.append("entry.2070069929", document.getElementById("business_name").value.trim());
+        formData.append("entry.1467122168", document.getElementById("number").value.trim());
+
+        // new fields - Google Form er real entry ID diye replace korte hobe
+        // formData.append("entry.2070069929", document.getElementById("business_name").value.trim());
+        // formData.append("entry.NUMBER_ID", document.getElementById("number").value.trim());
+
+        fetch(GOOGLE_FORM_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData
+        })
+        .then(function () {
+            status.innerText = "Message sent successfully.";
+            form.reset();
+        })
+        .catch(function () {
+            status.innerText = "Something went wrong.";
+        })
+        .finally(function () {
+            submitBtn.disabled = false;
+        });
+    });
+});
+</script>

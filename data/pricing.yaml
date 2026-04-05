@@ -1,0 +1,56 @@
+section_tagline: MONTHLY SOCIAL MEDIA MANAGEMENT PLAN
+section_title: Choose Your Pricing Plan
+
+plans:
+  - price: "10000 TK"
+    period: "Per month"
+    title: "Business"
+    text: "Perfect for small businesses starting their social media growth."
+    delay: "000ms"
+    features:
+      - 12 Content Posts Per Month
+      - Custom Branded Graphics
+      - 2 Reels Video Editing Per Month
+      - Caption + CTAs Optimized
+      - Comment Moderation
+      - Monthly Detailed Analytics
+      - 2 Ad Campaign Setup Per Month
+      - Occasional Cover and Post Design
+    button_text: "Get The Plan Now"
+    button_url: "/contact/"
+
+  - price: "25000 TK"
+    period: "Per month"
+    title: "Company"
+    text: "Ideal for businesses that want stronger content performance and ad support."
+    delay: "100ms"
+    features:
+      - 16 Content Posts Per Month
+      - 4 Reels Video Editing Per Month
+      - Full Funnel Strategy
+      - Weekly Analytics & Optimization
+      - 3 Meta Ad Campaigns
+      - A/B Testing
+      - Basic Pixel/Events Setup
+      - Occasional Cover and Post Design
+    button_text: "Get The Plan Now"
+    button_url: "/contact/"
+
+  - price: "35000 TK"
+    period: "Per month"
+    title: "Agency"
+    text: "Best for brands that want aggressive growth and full social media management."
+    delay: "200ms"
+    features:
+      - 20 Content Posts Per Month
+      - 8 Reels Video Editing Per Month
+      - Daily Content Scheduling
+      - Weekly Analytics & Optimization
+      - Daily Community Management
+      - Full Funnel Ads
+      - Monthly Strategy Meeting
+      - Quarterly Brand Audit
+      - Occasional Cover and Post Design
+      - WordPress Website Maintenance
+    button_text: "Get The Plan Now"
+    button_url: "/contact/"
