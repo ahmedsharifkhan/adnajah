@@ -2,7 +2,7 @@
 <div class="custom-cursor__cursor-two"></div>
 
 <div class="preloader">
-    <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
+    <div class="preloader__image" style="background-image: url(' {{ "assets/images/loader.png" | relURL }}');"></div>
 </div>
 <!-- /.preloader -->
 <div class="page-wrapper">
@@ -29,7 +29,7 @@
 <i class="flaticon-phone"></i>
 </span>
 
-<a href="tel:{{ .Site.Data.social.contact.phone }}">
+<a href="tel:{{ .Site.Data.social.contact.phone }}" target="_blank">
 {{ .Site.Data.social.contact.phone }}
 </a>
 
@@ -40,7 +40,7 @@
 <i class="flaticon-email"></i>
 </span>
 
-<a href="mailto:{{ .Site.Data.social.contact.email }}">
+<a href="mailto:{{ .Site.Data.social.contact.email }}" target="_blank">
 {{ .Site.Data.social.contact.email }}
 </a>
 
@@ -73,7 +73,7 @@
 
 {{ range .Site.Data.social.social }}
 
-<a href="{{ .link }}">
+<a href="{{ .link }}" target="_blank">
 <i class="{{ .icon }}"></i>
 <span class="sr-only">social</span>
 </a>
