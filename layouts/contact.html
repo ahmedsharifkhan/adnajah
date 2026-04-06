@@ -37,6 +37,7 @@
 
                     {{ partial "form.html" . }}
                     <!-- /.col-lg-6 -->
+
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.contact-two -->
@@ -51,9 +52,9 @@
                     <div class="google-map__info">
                         <h3 class="google-map__info__title">Contact Info</h3>
                         <ul class="list-unstyled google-map__info__list">
-                            <li><i class="flaticon-pin"></i>Gregory Cartwright, 4059 Carling Avenue, Ugglebarnby</li>
-                            <li><i class="flaticon-phone"></i><a href="tel:+61086660112">+6108-666-0112</a></li>
-                            <li><i class="flaticon-email"></i><a href="mailto:info@gmail.com">info@gmail.com</a></li>
+                            <li><i class="flaticon-pin"></i>{{ .Site.Data.social.contact.address }}</li>
+                            <li><i class="flaticon-phone"></i><a href="tel:+{{ .Site.Data.social.contact.phone }}">{{ .Site.Data.social.contact.phone }}</a></li>
+                            <li><i class="flaticon-email"></i><a href="mailto:{{ .Site.Data.social.contact.email }}">{{ .Site.Data.social.contact.email }}</a></li>
                         </ul>
                     </div>
                 </div>
