@@ -1,0 +1,64 @@
+section:
+  tagline: "Testimonials"
+  title: "What Our Clients Say About Us"
+
+reviews:
+  - name: "Arif Hasan"
+    designation: "Founder"
+    image: "/assets/images/resources/Arif Hasan.jpg"
+    content: "Ad Najah helped us scale our business faster than we expected. Within a short time, our sales improved significantly and our brand presence became much stronger. Their team is highly professional and results-driven."
+    rating: 5
+
+  - name: "Fahim Rahman"
+    designation: "Ecommerce Owner"
+    image: "/assets/images/resources/Fahim Rahman.jpg"
+    content: "Before working with Ad Najah, we struggled with inconsistent sales. Now we have a stable flow of orders every day. Their strategy and execution are on another level."
+    rating: 5
+
+  - name: "Jannatul Ferdous Hasan"
+    designation: "Entrepreneur"
+    image: "/assets/images/resources/Jannatul FerdousHasan.jpg"
+    content: "From strategy to execution, everything was smooth and professional. We finally found a team that actually delivers what they promise."
+    rating: 5
+
+  - name: "Mahmud Karim"
+    designation: "Business Owner"
+    image: "/assets/images/resources/Mahmud Karim.jpg"
+    content: "We saw a noticeable boost in traffic and conversions after partnering with Ad Najah. Their strategies are smart, data-backed, and focused on real growth."
+    rating: 5
+
+  - name: "Mehedi Hasan"
+    designation: "Digital Product Seller"
+    image: "/assets/images/resources/Mehedi Hasan.jpg"
+    content: "Our campaigns are now more optimized and profitable. Their team continuously monitors and improves performance, which made a big difference."
+    rating: 5
+
+  - name: "Nabila Islam"
+    designation: "Brand Owner"
+    image: "/assets/images/resources/Nabila Islam.jpg"
+    content: "They helped us build a strong brand identity along with performance marketing. The results were beyond our expectations, especially in customer acquisition."
+    rating: 5
+
+  - name: "Nusrat Jahan"
+    designation: "Managing Director"
+    image: "/assets/images/resources/Nusrat Jahan.jpg"
+    content: "Ad Najah didn’t just run ads—they built a complete growth system for our business. Our ROI increased, and we finally started seeing predictable results."
+    rating: 5
+
+  - name: "Rakib Hossain"
+    designation: "Startup Founder"
+    image: "/assets/images/resources/Rakib Hossain.jpg"
+    content: "Ad Najah understands business deeply, not just marketing. They helped us fix our funnel, improve conversions, and scale profitably."
+    rating: 5
+
+  - name: "Sadia Rahman"
+    designation: "Co-Founder"
+    image: "/assets/images/resources/Sadia Rahman.jpg"
+    content: "Working with Ad Najah was a game changer for us. Our ad performance improved, and we started getting quality leads consistently. They truly understand how to grow a business online."
+    rating: 5
+
+  - name: "Tanvir Ahmed"
+    designation: "CEO"
+    image: "/assets/images/resources/Tanvir Ahmed.jpg"
+    content: "Their team is proactive, supportive, and always focused on delivering results. Since working with Ad Najah, our business performance has improved across all channels."
+    rating: 5

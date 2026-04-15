@@ -1,82 +1,68 @@
-       <section class="testimonials-one">
-            <div class="testimonials-one__shape-one" style="background-image: url('{{ "/assets/images/shapes/testimonials-1-shape-1.png" | relURL }}');"></div>
-            <div class="testimonials-one__shape-two" style="background-image: url('{{ "/assets/images/shapes/testimonials-1-shape-2.png" | relURL }}');"></div>
-            <div class="testimonials-one__shape-three" style="background-image: url('{{ "/assets/images/shapes/testimonials-1-shape-3.png" | relURL }}');"></div>
-            <div class="testimonials-one__shape-four" style="background-image: url('{{ "/assets/images/shapes/testimonials-1-shape-4.png" | relURL }}');"></div>
-            <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="testimonials-one__image">
-                            <div class="testimonials-one__image__bg" style="background-image: url('{{ "/assets/images/shapes/testimonial-1-image-bg.png" | relURL }}');"></div>
-                            <img src="{{ "/assets/images/resources/testimonial-1-image.png" | relURL }}" alt="growim">
-                        </div>
+<section class="testimonials-one">
+    <div class="testimonials-one__shape-one"
+        style="background-image: url('{{ "/assets/images/shapes/testimonials-1-shape-1.png" | relURL }}');"></div>
+    <div class="testimonials-one__shape-two"
+        style="background-image: url('{{ "/assets/images/shapes/testimonials-1-shape-2.png" | relURL }}');"></div>
+    <div class="testimonials-one__shape-three"
+        style="background-image: url('{{ "/assets/images/shapes/testimonials-1-shape-3.png" | relURL }}');"></div>
+    <div class="testimonials-one__shape-four"
+        style="background-image: url('{{ "/assets/images/shapes/testimonials-1-shape-4.png" | relURL }}');"></div>
+
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                <div class="testimonials-one__image">
+                    <div class="testimonials-one__image__bg"
+                        style="background-image: url('{{ "/assets/images/shapes/testimonial-1-image-bg.png" | relURL }}');"></div>
+                    <img src="{{ "/assets/images/resources/testimonial-1-image.png" | relURL }}" alt="growim">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="testimonials-one__area">
+                    <div class="sec-title text-left">
+                        <h6 class="sec-title__tagline">{{ site.Data.testimonials.section.tagline }}</h6>
+                        <h3 class="sec-title__title">{{ site.Data.testimonials.section.title }}</h3>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="testimonials-one__area">
-                            <div class="sec-title text-left">
 
-                                <h6 class="sec-title__tagline">Testimonials</h6><!-- /.sec-title__tagline -->
+                    <div class="testimonials-one__carousel growim-owl__carousel owl-carousel" data-owl-options='{
+                        "items": 1,
+                        "margin": 0,
+                        "loop": false,
+                        "smartSpeed": 700,
+                        "nav": false,
+                        "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                        "dots": false,
+                        "autoplay": true
+                    }'>
+                        {{ range site.Data.testimonials.reviews }}
+                        <div class="item">
+                            <div class="testimonials-one__item">
+                                <div class="testimonials-one__item__rating">
+                                    {{ range seq .rating }}
+                                    <i class="flaticon-star"></i>
+                                    {{ end }}
+                                </div>
 
-                                <h3 class="sec-title__title">What Our Clients Say About Us</h3><!-- /.sec-title__title -->
-                            </div><!-- /.sec-title -->
-                            <div class="testimonials-one__carousel growim-owl__carousel owl-carousel" data-owl-options='{
-							"items": 1,
-							"margin": 0,
-							"loop": false,
-							"smartSpeed": 700,
-							"nav": false,
-							"navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
-							"dots": false,
-							"autoplay": true
-						}'>
-                                <div class="item">
-                                    <div class="testimonials-one__item">
-                                        <div class="testimonials-one__item__rating">
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                        </div><!-- /.testimonials-one__item__rating -->
-                                        <div class="testimonials-one__item__content">
-                                            Hundreds of businesses have grown their revenue with Ad Najah. Here's what our clients have to say about working with us.
-                                        </div><!-- /.testimonials-one__item__content -->
-                                        <div class="testimonials-one__item__author">
-                                            <img src="{{ "/assets/images/resources/client-1-2.png" | relURL }}" alt="growim">
-                                            <h3 class="testimonials-one__item__name">
-                                                Linda E. Smith
-                                            </h3>
-                                            <p class="testimonials-one__item__designation">Founder</p>
-                                        </div><!-- /.testimonials-one__item__author -->
-                                        <div class="testimonials-one__item__quote"><i class="flaticon-quote"></i></div><!-- /.testimonials-one__item__quote -->
-                                    </div>
-                                </div><!-- item -->
-                                <div class="item">
-                                    <div class="testimonials-one__item">
-                                        <div class="testimonials-one__item__rating">
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                        </div><!-- /.testimonials-one__item__rating -->
-                                        <div class="testimonials-one__item__content">
-                                            Ad Najah completely transformed our online presence. Within 3 months, our website traffic doubled and our lead generation increased by 70%. Their team is proactive, data-driven, and genuinely invested in our success.
-                                        </div><!-- /.testimonials-one__item__content -->
-                                        <div class="testimonials-one__item__author">
-                                            <img src="{{ "/assets/images/resources/testi-1-11.jpg" | relURL }}" alt="growim">
-                                            <h3 class="testimonials-one__item__name">
-                                                Ronald Richards
-                                            </h3>
-                                            <p class="testimonials-one__item__designation">Co, Founder</p>
-                                        </div><!-- /.testimonials-one__item__author -->
-                                        <div class="testimonials-one__item__quote"><i class="flaticon-quote"></i></div><!-- /.testimonials-one__item__quote -->
-                                    </div>
-                                </div><!-- item -->
-                            </div><!-- /.testimonials-one__carousel -->
+                                <div class="testimonials-one__item__content">
+                                    {{ .content }}
+                                </div>
+
+                                <div class="testimonials-one__item__author">
+                                    <img src="{{ .image | relURL }}" alt="{{ .name }}">
+                                    <h3 class="testimonials-one__item__name">{{ .name }}</h3>
+                                    <p class="testimonials-one__item__designation">{{ .designation }}</p>
+                                </div>
+
+                                <div class="testimonials-one__item__quote">
+                                    <i class="flaticon-quote"></i>
+                                </div>
+                            </div>
                         </div>
+                        {{ end }}
                     </div>
                 </div>
-            </div><!-- /.container -->
-        </section>
-        <!-- /.testimonials-one -->
+            </div>
+        </div>
+    </div>
+</section>
