@@ -1,68 +1,45 @@
-        <!-- Projects showcase start -->
+<section class="portfolio-five">
+    <div class="portfolio-five__shape-one" style="background-image: url('{{ "assets/images/shapes/portfolio-five-shape-1.png" | relURL }}');"></div>
+    <div class="portfolio-five__shape-two" style="background-image: url('{{ "assets/images/shapes/portfolio-five-shape-2.png" | relURL }}');"></div>
+    <div class="portfolio-five__shape-three" style="background-image: url('{{ "assets/images/shapes/portfolio-five-shape-3.png" | relURL }}');"></div>
 
-        <section class="portfolio-five">
-            <div class="portfolio-five__shape-one" style="background-image: url('{{ "assets/images/shapes/portfolio-five-shape-1.png" | relURL }}');"></div>
-            <div class="portfolio-five__shape-two" style="background-image: url('{{ "assets/images/shapes/portfolio-five-shape-2.png" | relURL }}');"></div>
-            <div class="portfolio-five__shape-three" style="background-image: url('{{ "assets/images/shapes/portfolio-five-shape-3.png" | relURL }}');"></div>
-            <div class="container">
-                <div class="sec-title text-center">
+    <div class="container">
+        <div class="sec-title text-center">
+            <h6 class="sec-title__tagline">{{ site.Data.projects.section.tagline }}</h6>
+            <h3 class="sec-title__title">{{ site.Data.projects.section.title | safeHTML }}</h3>
+        </div>
 
-                    <h6 class="sec-title__tagline">our selected projects</h6><!-- /.sec-title__tagline -->
+        <div class="portfolio-five__carousel growim-owl__carousel growim-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
+            "items": 1,
+            "margin": 30,
+            "loop": false,
+            "smartSpeed": 700,
+            "center": false,
+            "nav": true,
+            "navText": ["<span class=\"flaticon-long-arrow-left\"></span>","<span class=\"flaticon-long-arrow-right\"></span>"],
+            "dots": false,
+            "autoplay": false
+        }'>
 
-                    <h3 class="sec-title__title">Discover Our Selected<br> Projects</h3><!-- /.sec-title__title -->
-                </div><!-- /.sec-title -->
-                <div class="portfolio-five__carousel growim-owl__carousel growim-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-			"items": 1,
-			"margin": 30,
-			"loop": false,
-			"smartSpeed": 700,
-			"center": false,
-			"nav": true,
-			"navText": ["<span class=\"flaticon-long-arrow-left\"></span>","<span class=\"flaticon-long-arrow-right\"></span>"],
-			"dots": false,
-			"autoplay": false
-			}'>
-                    <div class="item">
-                        <div class="portfolio-five__item">
-                            <img src="{{ "assets/images/portfolio/portfolio-5-1.jpg" | relURL }}" alt="growim">
-                            <div class="portfolio-five__item__content">
-                                <h5 class="portfolio-five__item__cate">Design</h5>
-                                <h3 class="portfolio-five__item__title"><a href="{{ "/portfolio" | relURL }}">AI Product Design</a></h3>
-                                <div class="portfolio-five__item__number"></div><!-- /.portfolio-five__item__number -->
-                            </div><!-- /.portfolio-five__item__content -->
-                        </div><!-- /.portfolio-five__item -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="portfolio-five__item">
-                            <img src="{{ "assets/images/portfolio/portfolio-5-2.jpg" | relURL }}" alt="growim">
-                            <div class="portfolio-five__item__content">
-                                <h5 class="portfolio-five__item__cate">Technology</h5>
-                                <h3 class="portfolio-five__item__title"><a href="{{ "/portfolio" | relURL }}">AI Product Design</a></h3>
-                                <div class="portfolio-five__item__number"></div><!-- /.portfolio-five__item__number -->
-                            </div><!-- /.portfolio-five__item__content -->
-                        </div><!-- /.portfolio-five__item -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="portfolio-five__item">
-                            <img src="{{ "assets/images/portfolio/portfolio-5-1.jpg" | relURL }}" alt="growim">
-                            <div class="portfolio-five__item__content">
-                                <h5 class="portfolio-five__item__cate">Design</h5>
-                                <h3 class="portfolio-five__item__title"><a href="{{ "/portfolio" | relURL }}">AI Product Design</a></h3>
-                                <div class="portfolio-five__item__number"></div><!-- /.portfolio-five__item__number -->
-                            </div><!-- /.portfolio-five__item__content -->
-                        </div><!-- /.portfolio-five__item -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="portfolio-five__item">
-                            <img src="{{ "assets/images/portfolio/portfolio-5-2.jpg" | relURL }}" alt="growim">
-                            <div class="portfolio-five__item__content">
-                                <h5 class="portfolio-five__item__cate">Technology</h5>
-                                <h3 class="portfolio-five__item__title"><a href="{{ "/portfolio" | relURL }}">AI Product Design</a></h3>
-                                <div class="portfolio-five__item__number"></div><!-- /.portfolio-five__item__number -->
-                            </div><!-- /.portfolio-five__item__content -->
-                        </div><!-- /.portfolio-five__item -->
-                    </div><!-- /.item -->
+            {{ range site.Data.projects.featured }}
+                {{ $slug := .slug }}
+                {{ $page := site.GetPage (printf "/portfolio/%s" $slug) }}
+                {{ with $page }}
+                <div class="item">
+                    <div class="portfolio-five__item">
+                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                        <div class="portfolio-five__item__content">
+                            <h5 class="portfolio-five__item__cate">{{ .Params.category }}</h5>
+                            <h3 class="portfolio-five__item__title">
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h3>
+                            <div class="portfolio-five__item__number"></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- project showcase end -->
+                {{ end }}
+            {{ end }}
+
+        </div>
+    </div>
+</section>

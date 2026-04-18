@@ -1,15 +1,16 @@
 ---
 title: "Car Servicing Project"
-imagelist: "/assets/images/portfolio/portfolio-6-1.jpg"
+slug: "digital-marketing"
+description: "Creative marketing campaign for modern brands."
 category: "Car Servicing"
+image: "/assets/images/portfolio/portfolio-6-1.jpg"
 date: 2023-06-10
-
 imgsingle: "/assets/images/portfolio/portfolio-6-1.jpg"
-
 client: "Jhon Son Smith"
-start_date: "10 June, 2023"
-end_date: "10 October, 2023"
-budget: "$25,800.99"
+services:
+  - "Social Media Marketing"
+  - "Creative Strategy"
+  - "Paid Ads"
 ---
 
 ## Project Overview

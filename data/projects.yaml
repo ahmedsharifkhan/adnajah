@@ -1,0 +1,9 @@
+section:
+  tagline: "our selected projects"
+  title: "Discover Our Selected<br> Projects"
+
+featured:
+  - slug: "social-media-campaign"
+  - slug: "digital-marketing"
+  - slug: "project-4"
+  - slug: "project-2"
