@@ -1,11 +1,11 @@
 ---
-title: "Social Media Campaign"
+title: "Best Ad Creative"
 slug: "social-media-campaign"
 description: "Creative marketing campaign for modern brands."
 category: "Marketing"
-image: "/assets/images/portfolio/portfolio-6-4.jpg"
+image: "/assets/images/portfolio/adnajah banner.png"
 date: 2026-03-10
-imgsingle: "/assets/images/portfolio/portfolio-6-4.jpg"
+imgsingle: "/assets/images/portfolio/banner1.gif"
 client: "Ad Najah"
 services:
   - "Social Media Marketing"
@@ -13,15 +13,9 @@ services:
   - "Paid Ads"
 ---
 
-This project showcases a modern social media marketing strategy designed to increase engagement and brand visibility.
+We developed a complete brand identity system that reflects the company’s vision and values.
 
-We developed a complete campaign structure including content direction, ad creatives, and performance optimization to improve reach, conversions, and brand awareness.
-
-Project description here.
+From logo creation to color palette and typography, everything was designed to create a strong and lasting impression in the market.
 
 
-This project showcases a modern social media marketing strategy designed to increase engagement and brand visibility.
-
-
-
-Project description here.
+[👉 View Full Portfolio on Behance](https://www.behance.net/adsnajah)

@@ -22,19 +22,42 @@
         }'>
 
             {{ range site.Data.projects.featured }}
-                {{ $slug := .slug }}
-                {{ $page := site.GetPage (printf "/portfolio/%s" $slug) }}
+                {{ $page := site.GetPage (printf "/portfolio/%s" .slug) }}
                 {{ with $page }}
                 <div class="item">
-                    <div class="portfolio-five__item">
-                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
-                        <div class="portfolio-five__item__content">
+                    <div class="portfolio-five__item" style="position:relative; overflow:hidden; border-radius:30px;">
+
+                        <!-- IMAGE WRAPPER -->
+                        <div style="
+                            width:100%;
+                            height:680px;
+                            overflow:hidden;
+                            border-radius:30px;
+                        ">
+
+                            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}"
+                                style="
+                                    width:100%;
+                                    height:100%;
+                                    object-fit:cover;
+                                    object-position:center;
+                                    display:block;
+                                ">
+                        </div>
+
+                        <!-- CONTENT -->
+                        <div class="portfolio-five__item__content"
+                             style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
+                            
                             <h5 class="portfolio-five__item__cate">{{ .Params.category }}</h5>
+
                             <h3 class="portfolio-five__item__title">
                                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                             </h3>
+
                             <div class="portfolio-five__item__number"></div>
                         </div>
+
                     </div>
                 </div>
                 {{ end }}
@@ -43,3 +66,18 @@
         </div>
     </div>
 </section>
+
+<script>
+function resizePortfolioImages() {
+    var images = document.querySelectorAll('.portfolio-five__item div:first-child');
+    if (window.innerWidth < 768) {
+        images.forEach(el => el.style.height = "320px");
+    } else if (window.innerWidth < 992) {
+        images.forEach(el => el.style.height = "500px");
+    } else {
+        images.forEach(el => el.style.height = "680px");
+    }
+}
+window.addEventListener('load', resizePortfolioImages);
+window.addEventListener('resize', resizePortfolioImages);
+</script>
