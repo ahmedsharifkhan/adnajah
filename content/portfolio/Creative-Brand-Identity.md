@@ -5,12 +5,17 @@ description: "Creative marketing campaign for modern brands."
 category: "Marketing"
 image: "/assets/images/portfolio/banner1.gif"
 date: 2026-03-10
-imgsingle: "/assets/images/portfolio/Best Social Media Creative.gif"
+imgsingle: "/assets/images/portfolio/banner1.gif."
 client: "Ad Najah"
 services:
   - "Social Media Marketing"
   - "Creative Strategy"
   - "Paid Ads"
+
+imagelist: "/assets/images/portfolio/banner1.gif"
+budget: "$1,000"
+start_date: "2025-03-10"
+end_date: "2025-03-25"
 ---
 
 
