@@ -1,11 +1,11 @@
 ---
-title: "Best Ad Creative"
+title: "Best Car Ad Creative"
 slug: "social-media-campaign"
 description: "Creative marketing campaign for modern brands."
 category: "Marketing"
-image: "/assets/images/portfolio/adnajah banner.png"
+image: "/assets/images/portfolio/car boss.gif"
 date: 2026-03-10
-imgsingle: "/assets/images/portfolio/banner1.gif"
+imgsingle: "/assets/images/portfolio/video slider presentation 1.gif"
 client: "Ad Najah"
 services:
   - "Social Media Marketing"

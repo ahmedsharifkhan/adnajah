@@ -5,7 +5,7 @@ description: "Creative marketing campaign for modern brands."
 category: "Marketing"
 image: "/assets/images/portfolio/banner1.gif"
 date: 2026-03-10
-imgsingle: "/assets/images/portfolio/banner1.gif"
+imgsingle: "/assets/images/portfolio/Best Social Media Creative.gif"
 client: "Ad Najah"
 services:
   - "Social Media Marketing"
