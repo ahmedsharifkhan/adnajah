@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="m-g1" cx="20%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#7B4DFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="m-g2" cx="85%" cy="65%" r="40%">
+      <stop offset="0%" stop-color="#00C2FF" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="m-g3" cx="75%" cy="10%" r="30%">
+      <stop offset="0%" stop-color="#FF3B7A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="m-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7B4DFF" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#7B4DFF"/>
+      <stop offset="70%" stop-color="#00C2FF"/>
+      <stop offset="100%" stop-color="#00C2FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="m-num" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9B70FF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <linearGradient id="m-card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161630" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0D0D22" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="m-glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="m-dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="#FFFFFF" fill-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#07071A"/>
+  <rect width="1920" height="1080" fill="url(#m-g1)"/>
+  <rect width="1920" height="1080" fill="url(#m-g2)"/>
+  <rect width="1920" height="1080" fill="url(#m-g3)"/>
+  <rect width="1920" height="1080" fill="url(#m-dots)"/>
+
+  <!-- Top + Bottom accent lines -->
+  <rect y="0" width="1920" height="3" fill="url(#m-accent)"/>
+  <rect y="1077" width="1920" height="3" fill="url(#m-accent)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="80" cy="920" r="180" fill="none" stroke="#7B4DFF" stroke-width="1" stroke-opacity="0.12"/>
+  <circle cx="80" cy="920" r="120" fill="none" stroke="#7B4DFF" stroke-width="1" stroke-opacity="0.08"/>
+  <circle cx="1880" cy="160" r="220" fill="none" stroke="#00C2FF" stroke-width="1" stroke-opacity="0.10"/>
+  <circle cx="1880" cy="160" r="150" fill="none" stroke="#00C2FF" stroke-width="1" stroke-opacity="0.07"/>
+
+  <!-- LEFT SECTION -->
+  <!-- Platform badge -->
+  <rect x="90" y="90" width="190" height="44" rx="22" fill="#7B4DFF" fill-opacity="0.18" stroke="#7B4DFF" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="185" y="118" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#9B70FF" text-anchor="middle" letter-spacing="3">META ADS</text>
+
+  <!-- Big ROAS number -->
+  <text x="90" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="178" font-weight="900" fill="url(#m-num)" filter="url(#m-glow)" letter-spacing="-8">10.82x</text>
+
+  <!-- ROAS label -->
+  <text x="92" y="370" font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="8">ROAS</text>
+
+  <!-- Subtitle -->
+  <text x="92" y="430" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#7777AA">Facebook &amp; Instagram Full-Funnel Campaign</text>
+
+  <!-- Separator -->
+  <rect x="92" y="460" width="340" height="2" rx="1" fill="url(#m-accent)" opacity="0.7"/>
+
+  <!-- Sub stats -->
+  <text x="92" y="510" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#5555AA" letter-spacing="2">TOTAL SPEND</text>
+  <text x="92" y="562" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">$190,236</text>
+
+  <text x="380" y="510" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#5555AA" letter-spacing="2">REVENUE</text>
+  <text x="380" y="562" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">$1.53M</text>
+
+  <!-- Period -->
+  <text x="92" y="620" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#444466">Jan 2024 – Jan 2025 · 12-Month Campaign</text>
+
+  <!-- Branding -->
+  <text x="92" y="980" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Ad Najah</text>
+  <text x="92" y="1015" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#444466">adsnajah.com · Meta Ads Performance Results</text>
+
+  <!-- RIGHT SECTION — Screen mockup -->
+  <!-- Monitor outer frame -->
+  <rect x="920" y="60" width="900" height="580" rx="16" fill="#111128" stroke="#252545" stroke-width="2"/>
+  <!-- Screen area -->
+  <rect x="940" y="80" width="860" height="540" rx="10" fill="#09091E"/>
+  <!-- Title bar -->
+  <rect x="940" y="80" width="860" height="44" rx="0" fill="#111130"/>
+  <rect x="940" y="80" width="860" height="44" rx="10"/>
+  <circle cx="968" cy="102" r="7" fill="#FF5F57"/>
+  <circle cx="994" cy="102" r="7" fill="#FFBD2E"/>
+  <circle cx="1020" cy="102" r="7" fill="#28C840"/>
+  <text x="1140" y="108" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#555577">Meta Ads Manager — Campaign Insights</text>
+  <rect x="1650" y="88" width="120" height="28" rx="14" fill="#7B4DFF" fill-opacity="0.3" stroke="#7B4DFF" stroke-width="1"/>
+  <text x="1710" y="107" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9B70FF" text-anchor="middle">AI Insights</text>
+
+  <!-- Dashboard content inside screen -->
+  <!-- Top metric row -->
+  <rect x="955" y="140" width="170" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1040" y="168" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Amount Spent</text>
+  <text x="1040" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800" fill="#CCCCEE" text-anchor="middle">$190,236</text>
+
+  <rect x="1140" y="140" width="200" height="80" rx="8" fill="#131330" stroke="#7B4DFF" stroke-width="1.5"/>
+  <text x="1240" y="162" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#9B70FF" text-anchor="middle">ROAS</text>
+  <text x="1240" y="205" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#9B70FF" text-anchor="middle" filter="url(#m-glow)">10.82x</text>
+
+  <rect x="1358" y="140" width="170" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1443" y="168" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Purchase Value</text>
+  <text x="1443" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800" fill="#CCCCEE" text-anchor="middle">$1,535,393</text>
+
+  <rect x="1545" y="140" width="140" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1615" y="168" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Impressions</text>
+  <text x="1615" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800" fill="#CCCCEE" text-anchor="middle">4,000,000</text>
+
+  <rect x="1702" y="140" width="90" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1747" y="168" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">CTR</text>
+  <text x="1747" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="800" fill="#28C840" text-anchor="middle">0.71%</text>
+
+  <!-- Chart area -->
+  <rect x="955" y="238" width="480" height="220" rx="8" fill="#0D0D20" stroke="#1A1A38" stroke-width="1"/>
+  <text x="975" y="262" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#555577">Monthly Revenue vs Spend</text>
+  <!-- Chart bars - 12 months -->
+  <rect x="975" y="380" width="28" height="60" rx="4" fill="#7B4DFF" fill-opacity="0.6"/>
+  <rect x="1013" y="340" width="28" height="100" rx="4" fill="#7B4DFF" fill-opacity="0.7"/>
+  <rect x="1051" y="360" width="28" height="80" rx="4" fill="#7B4DFF" fill-opacity="0.6"/>
+  <rect x="1089" y="320" width="28" height="120" rx="4" fill="#7B4DFF" fill-opacity="0.75"/>
+  <rect x="1127" y="300" width="28" height="140" rx="4" fill="#7B4DFF" fill-opacity="0.8"/>
+  <rect x="1165" y="350" width="28" height="90" rx="4" fill="#7B4DFF" fill-opacity="0.65"/>
+  <rect x="1203" y="310" width="28" height="130" rx="4" fill="#7B4DFF" fill-opacity="0.8"/>
+  <rect x="1241" y="290" width="28" height="150" rx="4" fill="#9B70FF" fill-opacity="0.85"/>
+  <rect x="1279" y="280" width="28" height="160" rx="4" fill="#9B70FF" fill-opacity="0.9"/>
+  <rect x="1317" y="260" width="28" height="180" rx="4" fill="#00C2FF" fill-opacity="0.8"/>
+  <rect x="1355" y="270" width="28" height="170" rx="4" fill="#00C2FF" fill-opacity="0.85"/>
+  <rect x="1393" y="250" width="28" height="190" rx="4" fill="#00D4FF" fill-opacity="0.9"/>
+  <!-- Revenue line overlay -->
+  <polyline points="989,370 1027,328 1065,348 1103,305 1141,285 1179,335 1217,295 1255,272 1293,260 1331,240 1369,248 1407,228" fill="none" stroke="#00D4FF" stroke-width="2.5" stroke-opacity="0.8"/>
+  <!-- X axis labels -->
+  <text x="975" y="460" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#333355">Jan</text>
+  <text x="1090" y="460" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#333355">Apr</text>
+  <text x="1200" y="460" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#333355">Jul</text>
+  <text x="1320" y="460" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#333355">Oct</text>
+  <text x="1410" y="460" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#333355">Jan</text>
+
+  <!-- Right data table -->
+  <rect x="1450" y="238" width="340" height="220" rx="8" fill="#0D0D20" stroke="#1A1A38" stroke-width="1"/>
+  <text x="1470" y="262" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#555577">Campaign Breakdown</text>
+  <!-- Table rows -->
+  <rect x="1458" y="272" width="324" height="1" fill="#1A1A38"/>
+  <text x="1470" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Platform</text>
+  <text x="1760" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899" text-anchor="end">ROAS</text>
+  <rect x="1458" y="308" width="324" height="1" fill="#1A1A38"/>
+  <text x="1470" y="332" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE">Facebook Feed</text>
+  <text x="1760" y="332" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#9B70FF" text-anchor="end">11.2x</text>
+  <text x="1470" y="360" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE">Instagram Feed</text>
+  <text x="1760" y="360" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#9B70FF" text-anchor="end">10.5x</text>
+  <text x="1470" y="388" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE">Reels</text>
+  <text x="1760" y="388" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#00C2FF" text-anchor="end">12.1x</text>
+  <text x="1470" y="416" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE">Stories</text>
+  <text x="1760" y="416" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#9B70FF" text-anchor="end">9.8x</text>
+  <text x="1470" y="444" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Total</text>
+  <text x="1760" y="444" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#00D4FF" text-anchor="end">10.82x</text>
+
+  <!-- Bottom metric cards row -->
+  <rect x="955" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#7B4DFF" stroke-width="1.5"/>
+  <text x="1053" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#5555AA" text-anchor="middle" letter-spacing="1">CPC</text>
+  <text x="1053" y="570" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#9B70FF" text-anchor="middle">$0.35</text>
+  <text x="1053" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Per Click</text>
+
+  <rect x="1165" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#00C2FF" stroke-width="1.5"/>
+  <text x="1263" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#005577" text-anchor="middle" letter-spacing="1">CPM</text>
+  <text x="1263" y="570" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#00C2FF" text-anchor="middle">$2.47</text>
+  <text x="1263" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Per 1,000 Impr.</text>
+
+  <rect x="1375" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#FF3B7A" stroke-width="1.5"/>
+  <text x="1473" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#882244" text-anchor="middle" letter-spacing="1">AD SETS</text>
+  <text x="1473" y="570" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#FF3B7A" text-anchor="middle">36</text>
+  <text x="1473" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Active Ad Sets</text>
+
+  <rect x="1585" y="476" width="205" height="126" rx="8" fill="#131330" stroke="#28C840" stroke-width="1.5"/>
+  <text x="1687" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#115522" text-anchor="middle" letter-spacing="1">MOM GROWTH</text>
+  <text x="1687" y="570" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#28C840" text-anchor="middle">+17%</text>
+  <text x="1687" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Month-over-Month</text>
+
+  <!-- Monitor stand -->
+  <rect x="1340" y="640" width="100" height="50" rx="4" fill="#111128"/>
+  <rect x="1260" y="690" width="260" height="14" rx="7" fill="#111128" stroke="#1E1E3A" stroke-width="1"/>
+
+  <!-- Bottom stats cards (outside monitor) -->
+  <rect x="920" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#7B4DFF" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1027" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#5555AA" text-anchor="middle" letter-spacing="1">TOTAL SPEND</text>
+  <text x="1027" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">$190K</text>
+
+  <rect x="1152" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#00C2FF" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1259" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#005577" text-anchor="middle" letter-spacing="1">REVENUE</text>
+  <text x="1259" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">$1.53M</text>
+
+  <rect x="1384" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#FF3B7A" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1491" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#882244" text-anchor="middle" letter-spacing="1">IMPRESSIONS</text>
+  <text x="1491" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">4M+</text>
+
+  <rect x="1616" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#9B70FF" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1723" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#5544AA" text-anchor="middle" letter-spacing="1">CONVERSIONS</text>
+  <text x="1723" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">1,847</text>
+</svg>

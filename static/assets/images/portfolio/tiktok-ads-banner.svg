@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="tg1" cx="20%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#EE1D52" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tg2" cx="85%" cy="65%" r="40%">
+      <stop offset="0%" stop-color="#69C9D0" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tg3" cx="50%" cy="5%" r="35%">
+      <stop offset="0%" stop-color="#EE1D52" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tt-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EE1D52" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#EE1D52"/>
+      <stop offset="70%" stop-color="#69C9D0"/>
+      <stop offset="100%" stop-color="#69C9D0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tt-num" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EE1D52"/>
+      <stop offset="100%" stop-color="#69C9D0"/>
+    </linearGradient>
+    <filter id="tt-glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="tt-dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="#FFFFFF" fill-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#07071A"/>
+  <rect width="1920" height="1080" fill="url(#tg1)"/>
+  <rect width="1920" height="1080" fill="url(#tg2)"/>
+  <rect width="1920" height="1080" fill="url(#tg3)"/>
+  <rect width="1920" height="1080" fill="url(#tt-dots)"/>
+  <rect y="0" width="1920" height="3" fill="url(#tt-accent)"/>
+  <rect y="1077" width="1920" height="3" fill="url(#tt-accent)"/>
+  <circle cx="80" cy="920" r="180" fill="none" stroke="#EE1D52" stroke-width="1" stroke-opacity="0.12"/>
+  <circle cx="80" cy="920" r="120" fill="none" stroke="#69C9D0" stroke-width="1" stroke-opacity="0.08"/>
+  <circle cx="1880" cy="160" r="220" fill="none" stroke="#69C9D0" stroke-width="1" stroke-opacity="0.10"/>
+  <circle cx="1880" cy="160" r="150" fill="none" stroke="#EE1D52" stroke-width="1" stroke-opacity="0.07"/>
+
+  <!-- Platform badge -->
+  <rect x="90" y="75" width="210" height="44" rx="22" fill="#EE1D52" fill-opacity="0.18" stroke="#EE1D52" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="195" y="103" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#FF5577" text-anchor="middle" letter-spacing="3">TIKTOK ADS</text>
+
+  <text x="90" y="295" font-family="'Segoe UI', Arial, sans-serif" font-size="178" font-weight="900" fill="url(#tt-num)" filter="url(#tt-glow)" letter-spacing="-8">6.3x</text>
+  <text x="92" y="365" font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="8">ROAS</text>
+  <text x="92" y="425" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#7777AA">In-Feed, Spark Ads &amp; UGC Creative Strategy</text>
+  <rect x="92" y="455" width="340" height="2" rx="1" fill="url(#tt-accent)" opacity="0.7"/>
+  <text x="92" y="505" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#5555AA" letter-spacing="2">TOTAL SPEND</text>
+  <text x="92" y="557" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">$45,000</text>
+  <text x="350" y="505" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#5555AA" letter-spacing="2">REVENUE</text>
+  <text x="350" y="557" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">$283,500</text>
+  <text x="92" y="615" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#444466">Jun 2024 – Jan 2025 · 8-Month Campaign</text>
+  <text x="92" y="980" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Ad Najah</text>
+  <text x="92" y="1015" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#444466">adsnajah.com · TikTok Ads Performance Results</text>
+
+  <!-- Monitor frame -->
+  <rect x="920" y="60" width="900" height="580" rx="16" fill="#111128" stroke="#252545" stroke-width="2"/>
+  <rect x="940" y="80" width="860" height="540" rx="10" fill="#09091E"/>
+  <rect x="940" y="80" width="860" height="44" rx="10" fill="#111130"/>
+  <circle cx="968" cy="102" r="7" fill="#FF5F57"/>
+  <circle cx="994" cy="102" r="7" fill="#FFBD2E"/>
+  <circle cx="1020" cy="102" r="7" fill="#28C840"/>
+  <text x="1130" y="108" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#555577">TikTok Ads Manager — Campaign Overview</text>
+
+  <!-- Top metrics -->
+  <rect x="955" y="140" width="155" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1032" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Total Spend</text>
+  <text x="1032" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#CCCCEE" text-anchor="middle">$45,000</text>
+
+  <rect x="1123" y="140" width="185" height="80" rx="8" fill="#131330" stroke="#EE1D52" stroke-width="1.5"/>
+  <text x="1215" y="162" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#EE1D52" text-anchor="middle">ROAS</text>
+  <text x="1215" y="205" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FF5577" text-anchor="middle" filter="url(#tt-glow)">6.3x</text>
+
+  <rect x="1322" y="140" width="155" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1399" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Video Views</text>
+  <text x="1399" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#69C9D0" text-anchor="middle">12.4M</text>
+
+  <rect x="1491" y="140" width="155" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1568" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Completion</text>
+  <text x="1568" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#28C840" text-anchor="middle">68%</text>
+
+  <rect x="1660" y="140" width="130" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1725" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">CTR</text>
+  <text x="1725" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#FBBC05" text-anchor="middle">2.8%</text>
+
+  <!-- Chart: creative format performance -->
+  <rect x="955" y="238" width="460" height="225" rx="8" fill="#0D0D20" stroke="#1A1A38" stroke-width="1"/>
+  <text x="975" y="262" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#555577">ROAS by Creative Format</text>
+  <text x="975" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#888899">UGC Video</text>
+  <rect x="1080" y="284" width="290" height="22" rx="4" fill="#1A1A38"/>
+  <rect x="1080" y="284" width="270" height="22" rx="4" fill="#EE1D52" fill-opacity="0.8"/>
+  <text x="1385" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#FF5577">7.1x</text>
+  <text x="975" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#888899">Spark Ads</text>
+  <rect x="1080" y="324" width="290" height="22" rx="4" fill="#1A1A38"/>
+  <rect x="1080" y="324" width="240" height="22" rx="4" fill="#69C9D0" fill-opacity="0.8"/>
+  <text x="1385" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#69C9D0">6.4x</text>
+  <text x="975" y="380" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#888899">In-Feed</text>
+  <rect x="1080" y="364" width="290" height="22" rx="4" fill="#1A1A38"/>
+  <rect x="1080" y="364" width="210" height="22" rx="4" fill="#9B70FF" fill-opacity="0.8"/>
+  <text x="1385" y="380" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9B70FF">5.8x</text>
+  <text x="975" y="420" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#888899">TopView</text>
+  <rect x="1080" y="404" width="290" height="22" rx="4" fill="#1A1A38"/>
+  <rect x="1080" y="404" width="195" height="22" rx="4" fill="#FBBC05" fill-opacity="0.8"/>
+  <text x="1385" y="420" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#FBBC05">5.3x</text>
+  <rect x="975" y="432" width="400" height="1" fill="#1A1A38"/>
+  <text x="975" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Overall ROAS</text>
+  <text x="1390" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#FF5577">6.3x</text>
+
+  <!-- Metrics table -->
+  <rect x="1428" y="238" width="362" height="225" rx="8" fill="#0D0D20" stroke="#1A1A38" stroke-width="1"/>
+  <text x="1448" y="262" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#555577">Campaign Metrics</text>
+  <rect x="1436" y="272" width="346" height="1" fill="#1A1A38"/>
+  <text x="1448" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Video Views</text>
+  <text x="1776" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#69C9D0" text-anchor="end">12,400,000</text>
+  <text x="1448" y="330" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Completion Rate</text>
+  <text x="1776" y="330" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#28C840" text-anchor="end">68%</text>
+  <text x="1448" y="360" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Conversions</text>
+  <text x="1776" y="360" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE" text-anchor="end">3,240</text>
+  <text x="1448" y="390" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">CPM</text>
+  <text x="1776" y="390" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE" text-anchor="end">$8.50</text>
+  <text x="1448" y="420" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Cost Per Purchase</text>
+  <text x="1776" y="420" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE" text-anchor="end">$13.89</text>
+  <rect x="1436" y="430" width="346" height="1" fill="#1A1A38"/>
+  <text x="1448" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Total Revenue</text>
+  <text x="1776" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#FF5577" text-anchor="end">$283,500</text>
+
+  <!-- Metric cards -->
+  <rect x="955" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#EE1D52" stroke-width="1.5"/>
+  <text x="1053" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#882233" text-anchor="middle" letter-spacing="1">VIDEO VIEWS</text>
+  <text x="1053" y="568" font-family="'Segoe UI', Arial, sans-serif" font-size="40" font-weight="900" fill="#FF5577" text-anchor="middle">12.4M</text>
+  <text x="1053" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Total Views</text>
+
+  <rect x="1165" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#69C9D0" stroke-width="1.5"/>
+  <text x="1263" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#226666" text-anchor="middle" letter-spacing="1">COMPLETION</text>
+  <text x="1263" y="568" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#69C9D0" text-anchor="middle">68%</text>
+  <text x="1263" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Video Watch Rate</text>
+
+  <rect x="1375" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#9B70FF" stroke-width="1.5"/>
+  <text x="1473" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#443388" text-anchor="middle" letter-spacing="1">CONVERSIONS</text>
+  <text x="1473" y="568" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#9B70FF" text-anchor="middle">3,240</text>
+  <text x="1473" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Purchases</text>
+
+  <rect x="1585" y="476" width="205" height="126" rx="8" fill="#131330" stroke="#FBBC05" stroke-width="1.5"/>
+  <text x="1687" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#664400" text-anchor="middle" letter-spacing="1">COST/PURCHASE</text>
+  <text x="1687" y="568" font-family="'Segoe UI', Arial, sans-serif" font-size="38" font-weight="900" fill="#FBBC05" text-anchor="middle">$13.89</text>
+  <text x="1687" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Low CPA</text>
+
+  <rect x="1340" y="640" width="100" height="50" rx="4" fill="#111128"/>
+  <rect x="1260" y="690" width="260" height="14" rx="7" fill="#111128" stroke="#1E1E3A" stroke-width="1"/>
+
+  <rect x="920" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#EE1D52" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1027" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#882233" text-anchor="middle" letter-spacing="1">VIDEO VIEWS</text>
+  <text x="1027" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">12.4M</text>
+  <rect x="1152" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#69C9D0" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1259" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#226666" text-anchor="middle" letter-spacing="1">REVENUE</text>
+  <text x="1259" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">$283K</text>
+  <rect x="1384" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#9B70FF" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1491" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#443388" text-anchor="middle" letter-spacing="1">CPM</text>
+  <text x="1491" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">$8.50</text>
+  <rect x="1616" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#FBBC05" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1723" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#664400" text-anchor="middle" letter-spacing="1">TOTAL SPEND</text>
+  <text x="1723" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">$45K</text>
+</svg>

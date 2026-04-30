@@ -2,51 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:61009/services/explainer-video/</loc>
+    <loc>https://adnajah.com/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adnajah.com/portfolio/meta-ads-campaign-results/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adnajah.com/portfolio/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adnajah.com/portfolio/google-ads-campaign-results/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adnajah.com/portfolio/tiktok-ads-campaign-results/</loc>
+    <lastmod>2026-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adnajah.com/portfolio/linkedin-ads-campaign-results/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adnajah.com/portfolio/pinterest-ads-campaign-results/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adnajah.com/services/explainer-video/</loc>
     <lastmod>2026-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/</loc>
+    <loc>https://adnajah.com/services/</loc>
     <lastmod>2026-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/services/</loc>
-    <lastmod>2026-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:61009/portfolio/best-car-ad-creative/</loc>
+    <loc>https://adnajah.com/portfolio/best-car-ad-creative/</loc>
     <lastmod>2026-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/portfolio/creative-brand-identity/</loc>
+    <loc>https://adnajah.com/portfolio/creative-brand-identity/</loc>
     <lastmod>2026-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/portfolio/organic-food-creative/</loc>
+    <loc>https://adnajah.com/portfolio/organic-food-creative/</loc>
     <lastmod>2026-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/portfolio/</loc>
+    <loc>https://adnajah.com/portfolio/scroll-stoping-creative/</loc>
     <lastmod>2026-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/portfolio/scroll-stoping-creative/</loc>
+    <loc>https://adnajah.com/portfolio/new-social-media/</loc>
     <lastmod>2026-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/portfolio/new-social-media/</loc>
-    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:61009/about/</loc>
+    <loc>https://adnajah.com/about/</loc>
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/contact/</loc>
+    <loc>https://adnajah.com/contact/</loc>
     <lastmod>2026-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:61009/blog/first-post/</loc>
+    <loc>https://adnajah.com/blog/first-post/</loc>
   </url><url>
-    <loc>http://localhost:61009/blog/</loc>
+    <loc>https://adnajah.com/blog/</loc>
   </url><url>
-    <loc>http://localhost:61009/categories/</loc>
+    <loc>https://adnajah.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:61009/services/link-building-optimization/</loc>
+    <loc>https://adnajah.com/services/link-building-optimization/</loc>
   </url><url>
-    <loc>http://localhost:61009/services/link-building-optimization/</loc>
+    <loc>https://adnajah.com/services/link-building-optimization/</loc>
   </url><url>
-    <loc>http://localhost:61009/tags/</loc>
+    <loc>https://adnajah.com/tags/</loc>
   </url><url>
-    <loc>http://localhost:61009/services/video-editing/</loc>
+    <loc>https://adnajah.com/services/video-editing/</loc>
   </url>
 </urlset>

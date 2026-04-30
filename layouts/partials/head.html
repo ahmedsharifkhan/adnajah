@@ -13,28 +13,77 @@
 
 <meta name="description" content="Growim digital marketing template." />
 
-<!-- Fonts -->
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+<!-- Preconnect for fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Preload LCP hero background image -->
+<link rel="preload" href="{{ "assets/images/backgrounds/slider-1-1.png" | relURL }}" as="image" fetchpriority="high">
 
-<!-- Vendor CSS -->
+<!-- ═══════════════════════════════════════════
+     CRITICAL CSS — loaded synchronously
+     (bootstrap layout + main template styles)
+════════════════════════════════════════════ -->
 <link rel="stylesheet" href="{{ "assets/vendors/bootstrap/css/bootstrap.min.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/bootstrap-select/bootstrap-select.min.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/animate/animate.min.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/fontawesome/css/all.min.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/jquery-ui/jquery-ui.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/jarallax/jarallax.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/nouislider/nouislider.min.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/nouislider/nouislider.pips.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/tiny-slider/tiny-slider.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/growim-icons/style.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/slick/slick.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/jquery-flipster-master/jquery.flipster.min.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/owl-carousel/css/owl.carousel.min.css" | relURL }}">
-<link rel="stylesheet" href="{{ "assets/vendors/owl-carousel/css/owl.theme.default.min.css" | relURL }}">
-
-<!-- Template CSS -->
 <link rel="stylesheet" href="{{ "assets/css/growim.css" | relURL }}">
+
+<!-- ═══════════════════════════════════════════
+     NON-CRITICAL CSS — loaded asynchronously
+     (no render-blocking penalty)
+════════════════════════════════════════════ -->
+
+<!-- Google Fonts async -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"></noscript>
+
+<!-- Vendor CSS async -->
+<link rel="preload" href="{{ "assets/vendors/bootstrap-select/bootstrap-select.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/bootstrap-select/bootstrap-select.min.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/animate/animate.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/animate/animate.min.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/fontawesome/css/all.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/fontawesome/css/all.min.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/jquery-ui/jquery-ui.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/jquery-ui/jquery-ui.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/jarallax/jarallax.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/jarallax/jarallax.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/nouislider/nouislider.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/nouislider/nouislider.min.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/nouislider/nouislider.pips.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/nouislider/nouislider.pips.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/tiny-slider/tiny-slider.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/tiny-slider/tiny-slider.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/growim-icons/style.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/growim-icons/style.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/slick/slick.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/slick/slick.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/jquery-flipster-master/jquery.flipster.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/jquery-flipster-master/jquery.flipster.min.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/owl-carousel/css/owl.carousel.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/owl-carousel/css/owl.carousel.min.css" | relURL }}"></noscript>
+
+<link rel="preload" href="{{ "assets/vendors/owl-carousel/css/owl.theme.default.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/vendors/owl-carousel/css/owl.theme.default.min.css" | relURL }}"></noscript>
+
+<!-- Custom color CSS async -->
+<link rel="preload" href="{{ "assets/css/growim-color-1.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ "assets/css/growim-color-1.css" | relURL }}"></noscript>

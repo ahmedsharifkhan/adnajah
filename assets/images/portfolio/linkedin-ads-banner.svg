@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="lg1" cx="20%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#0A66C2" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lg2" cx="85%" cy="65%" r="40%">
+      <stop offset="0%" stop-color="#70B5F9" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lg3" cx="60%" cy="5%" r="30%">
+      <stop offset="0%" stop-color="#0A66C2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#07071A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="li-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A66C2" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#0A66C2"/>
+      <stop offset="70%" stop-color="#70B5F9"/>
+      <stop offset="100%" stop-color="#70B5F9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="li-num" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D8CFF"/>
+      <stop offset="100%" stop-color="#70B5F9"/>
+    </linearGradient>
+    <filter id="li-glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="li-dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="#FFFFFF" fill-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#07071A"/>
+  <rect width="1920" height="1080" fill="url(#lg1)"/>
+  <rect width="1920" height="1080" fill="url(#lg2)"/>
+  <rect width="1920" height="1080" fill="url(#lg3)"/>
+  <rect width="1920" height="1080" fill="url(#li-dots)"/>
+  <rect y="0" width="1920" height="3" fill="url(#li-accent)"/>
+  <rect y="1077" width="1920" height="3" fill="url(#li-accent)"/>
+  <circle cx="80" cy="920" r="180" fill="none" stroke="#0A66C2" stroke-width="1" stroke-opacity="0.14"/>
+  <circle cx="80" cy="920" r="120" fill="none" stroke="#70B5F9" stroke-width="1" stroke-opacity="0.09"/>
+  <circle cx="1880" cy="160" r="220" fill="none" stroke="#70B5F9" stroke-width="1" stroke-opacity="0.10"/>
+  <circle cx="1880" cy="160" r="150" fill="none" stroke="#0A66C2" stroke-width="1" stroke-opacity="0.07"/>
+
+  <!-- Platform badge -->
+  <rect x="90" y="75" width="220" height="44" rx="22" fill="#0A66C2" fill-opacity="0.20" stroke="#0A66C2" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="200" y="103" font-family="'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700" fill="#70B5F9" text-anchor="middle" letter-spacing="3">LINKEDIN ADS</text>
+
+  <!-- Key metric: Leads (not ROAS, more B2B relevant) -->
+  <text x="90" y="285" font-family="'Segoe UI', Arial, sans-serif" font-size="155" font-weight="900" fill="url(#li-num)" filter="url(#li-glow)" letter-spacing="-5">762</text>
+  <text x="92" y="355" font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="6">B2B LEADS</text>
+  <text x="92" y="415" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#7777AA">Sponsored Content, Lead Gen Forms &amp; InMail</text>
+  <rect x="92" y="445" width="340" height="2" rx="1" fill="url(#li-accent)" opacity="0.7"/>
+  <text x="92" y="495" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#5555AA" letter-spacing="2">COST PER LEAD</text>
+  <text x="92" y="547" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">$42</text>
+  <text x="260" y="495" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#5555AA" letter-spacing="2">PIPELINE ROAS</text>
+  <text x="260" y="547" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="900" fill="#FFFFFF">5.2x</text>
+  <text x="92" y="605" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="#444466">Apr 2024 – Dec 2024 · 9-Month B2B Campaign</text>
+  <text x="92" y="980" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Ad Najah</text>
+  <text x="92" y="1015" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#444466">adsnajah.com · LinkedIn Ads Performance Results</text>
+
+  <!-- Monitor frame -->
+  <rect x="920" y="60" width="900" height="580" rx="16" fill="#111128" stroke="#252545" stroke-width="2"/>
+  <rect x="940" y="80" width="860" height="540" rx="10" fill="#09091E"/>
+  <rect x="940" y="80" width="860" height="44" rx="10" fill="#111130"/>
+  <circle cx="968" cy="102" r="7" fill="#FF5F57"/>
+  <circle cx="994" cy="102" r="7" fill="#FFBD2E"/>
+  <circle cx="1020" cy="102" r="7" fill="#28C840"/>
+  <text x="1130" y="108" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#555577">LinkedIn Campaign Manager — Overview</text>
+
+  <!-- Top metrics -->
+  <rect x="955" y="140" width="155" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1032" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Total Spend</text>
+  <text x="1032" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#CCCCEE" text-anchor="middle">$32,000</text>
+
+  <rect x="1123" y="140" width="185" height="80" rx="8" fill="#131330" stroke="#0A66C2" stroke-width="1.5"/>
+  <text x="1215" y="162" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#0A66C2" text-anchor="middle">TOTAL LEADS</text>
+  <text x="1215" y="205" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#70B5F9" text-anchor="middle" filter="url(#li-glow)">762</text>
+
+  <rect x="1322" y="140" width="155" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1399" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Cost Per Lead</text>
+  <text x="1399" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#CCCCEE" text-anchor="middle">$42</text>
+
+  <rect x="1491" y="140" width="155" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1568" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">Lead Form CVR</text>
+  <text x="1568" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#28C840" text-anchor="middle">14.3%</text>
+
+  <rect x="1660" y="140" width="130" height="80" rx="8" fill="#131330" stroke="#252545" stroke-width="1"/>
+  <text x="1725" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#555577" text-anchor="middle">CTR</text>
+  <text x="1725" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#FBBC05" text-anchor="middle">1.8%</text>
+
+  <!-- Bar chart: lead gen by format -->
+  <rect x="955" y="238" width="460" height="225" rx="8" fill="#0D0D20" stroke="#1A1A38" stroke-width="1"/>
+  <text x="975" y="262" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#555577">Leads by Ad Format</text>
+  <text x="975" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#888899">Lead Gen Forms</text>
+  <rect x="1120" y="284" width="250" height="22" rx="4" fill="#1A1A38"/>
+  <rect x="1120" y="284" width="240" height="22" rx="4" fill="#0A66C2" fill-opacity="0.85"/>
+  <text x="1385" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#70B5F9">382</text>
+  <text x="975" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#888899">Sponsored Content</text>
+  <rect x="1120" y="324" width="250" height="22" rx="4" fill="#1A1A38"/>
+  <rect x="1120" y="324" width="190" height="22" rx="4" fill="#2D8CFF" fill-opacity="0.8"/>
+  <text x="1385" y="340" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#70B5F9">210</text>
+  <text x="975" y="380" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#888899">Message Ads</text>
+  <rect x="1120" y="364" width="250" height="22" rx="4" fill="#1A1A38"/>
+  <rect x="1120" y="364" width="155" height="22" rx="4" fill="#70B5F9" fill-opacity="0.75"/>
+  <text x="1385" y="380" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#70B5F9">112</text>
+  <text x="975" y="420" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#888899">Document Ads</text>
+  <rect x="1120" y="404" width="250" height="22" rx="4" fill="#1A1A38"/>
+  <rect x="1120" y="404" width="80" height="22" rx="4" fill="#4CA5FF" fill-opacity="0.7"/>
+  <text x="1385" y="420" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#70B5F9">58</text>
+  <rect x="975" y="432" width="400" height="1" fill="#1A1A38"/>
+  <text x="975" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Total Leads</text>
+  <text x="1390" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#70B5F9">762</text>
+
+  <!-- Metrics table -->
+  <rect x="1428" y="238" width="362" height="225" rx="8" fill="#0D0D20" stroke="#1A1A38" stroke-width="1"/>
+  <text x="1448" y="262" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#555577">B2B Campaign Metrics</text>
+  <rect x="1436" y="272" width="346" height="1" fill="#1A1A38"/>
+  <text x="1448" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Impressions</text>
+  <text x="1776" y="300" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE" text-anchor="end">890,000</text>
+  <text x="1448" y="330" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Avg CPC</text>
+  <text x="1776" y="330" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#CCCCEE" text-anchor="end">$6.20</text>
+  <text x="1448" y="360" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Lead Form CVR</text>
+  <text x="1776" y="360" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#28C840" text-anchor="end">14.3%</text>
+  <text x="1448" y="390" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Lead-to-Opp Rate</text>
+  <text x="1776" y="390" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#28C840" text-anchor="end">31%</text>
+  <text x="1448" y="420" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#888899">Pipeline ROAS</text>
+  <text x="1776" y="420" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#70B5F9" text-anchor="end">5.2x</text>
+  <rect x="1436" y="430" width="346" height="1" fill="#1A1A38"/>
+  <text x="1448" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Pipeline Revenue</text>
+  <text x="1776" y="452" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="700" fill="#70B5F9" text-anchor="end">$166,400</text>
+
+  <!-- Metric cards -->
+  <rect x="955" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#0A66C2" stroke-width="1.5"/>
+  <text x="1053" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#082244" text-anchor="middle" letter-spacing="1">COST PER LEAD</text>
+  <text x="1053" y="568" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#70B5F9" text-anchor="middle">$42</text>
+  <text x="1053" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Per Qualified Lead</text>
+
+  <rect x="1165" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#2D8CFF" stroke-width="1.5"/>
+  <text x="1263" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#113366" text-anchor="middle" letter-spacing="1">FORM CVR</text>
+  <text x="1263" y="568" font-family="'Segoe UI', Arial, sans-serif" font-size="40" font-weight="900" fill="#2D8CFF" text-anchor="middle">14.3%</text>
+  <text x="1263" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Avg Industry: 8%</text>
+
+  <rect x="1375" y="476" width="196" height="126" rx="8" fill="#131330" stroke="#28C840" stroke-width="1.5"/>
+  <text x="1473" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#115522" text-anchor="middle" letter-spacing="1">LEAD-TO-OPP</text>
+  <text x="1473" y="568" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#28C840" text-anchor="middle">31%</text>
+  <text x="1473" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Sales Qualified</text>
+
+  <rect x="1585" y="476" width="205" height="126" rx="8" fill="#131330" stroke="#FBBC05" stroke-width="1.5"/>
+  <text x="1687" y="506" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#664400" text-anchor="middle" letter-spacing="1">PIPELINE ROAS</text>
+  <text x="1687" y="568" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#FBBC05" text-anchor="middle">5.2x</text>
+  <text x="1687" y="592" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#444466" text-anchor="middle">Revenue Pipeline</text>
+
+  <rect x="1340" y="640" width="100" height="50" rx="4" fill="#111128"/>
+  <rect x="1260" y="690" width="260" height="14" rx="7" fill="#111128" stroke="#1E1E3A" stroke-width="1"/>
+
+  <rect x="920" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#0A66C2" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1027" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#082244" text-anchor="middle" letter-spacing="1">TOTAL LEADS</text>
+  <text x="1027" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">762</text>
+  <rect x="1152" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#2D8CFF" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1259" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#113366" text-anchor="middle" letter-spacing="1">PIPELINE</text>
+  <text x="1259" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">$166K</text>
+  <rect x="1384" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#28C840" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1491" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#115522" text-anchor="middle" letter-spacing="1">IMPRESSIONS</text>
+  <text x="1491" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">890K</text>
+  <rect x="1616" y="760" width="214" height="100" rx="14" fill="#111128" stroke="#FBBC05" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="1723" y="796" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#664400" text-anchor="middle" letter-spacing="1">TOTAL SPEND</text>
+  <text x="1723" y="838" font-family="'Segoe UI', Arial, sans-serif" font-size="30" font-weight="900" fill="#FFFFFF" text-anchor="middle">$32K</text>
+</svg>

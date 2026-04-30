@@ -12,9 +12,22 @@
 {{ $path = replaceRE "^assets/" "" $path }}
 
 {{ $isGif := findRE "\\.gif$" (lower $path) }}
+{{ $isSvg := findRE "\\.svg$" (lower $path) }}
 {{ $img := resources.Get $path }}
 
-{{ if $isGif }}
+{{ if $isSvg }}
+
+    <img
+        src="{{ $src | relURL }}"
+        alt="{{ $alt }}"
+        class="{{ $class }}"
+        loading="{{ $loading }}"
+        {{ if $priority }}fetchpriority="high"{{ end }}
+        decoding="async"
+        style="{{ $style | safeCSS }}"
+    >
+
+{{ else if $isGif }}
 
     {{ $webpPath := replaceRE "\\.gif$" ".webp" (lower $path) }}
     {{ $webp := resources.Get $webpPath }}
