@@ -657,9 +657,9 @@ adsnajah@gmail.com
         
 
         <section class="portfolio-five">
-    <div class="portfolio-five__shape-one" style="background-image: url('/assets/images/shapes/portfolio-five-shape-1.png');"></div>
-    <div class="portfolio-five__shape-two" style="background-image: url('/assets/images/shapes/portfolio-five-shape-2.png');"></div>
-    <div class="portfolio-five__shape-three" style="background-image: url('/assets/images/shapes/portfolio-five-shape-3.png');"></div>
+    <div class="portfolio-five__shape-one" aria-hidden="true" style="background-image: url('/assets/images/shapes/portfolio-five-shape-1.png');"></div>
+    <div class="portfolio-five__shape-two" aria-hidden="true" style="background-image: url('/assets/images/shapes/portfolio-five-shape-2.png');"></div>
+    <div class="portfolio-five__shape-three" aria-hidden="true" style="background-image: url('/assets/images/shapes/portfolio-five-shape-3.png');"></div>
 
     <div class="container">
         <div class="sec-title text-center">
@@ -676,7 +676,21 @@ adsnajah@gmail.com
             "nav": true,
             "navText": ["<span class=\"flaticon-long-arrow-left\"></span>","<span class=\"flaticon-long-arrow-right\"></span>"],
             "dots": false,
-            "autoplay": false
+            "autoplay": false,
+            "responsive": {
+                "0": {
+                    "items": 1,
+                    "margin": 15
+                },
+                "768": {
+                    "items": 1,
+                    "margin": 20
+                },
+                "992": {
+                    "items": 1,
+                    "margin": 30
+                }
+            }
         }'>
 
             
@@ -686,27 +700,23 @@ adsnajah@gmail.com
                     <div class="portfolio-five__item" style="position:relative; overflow:hidden; border-radius:30px;">
 
                         
-                        <div style="
-                            width:100%;
-                            height:680px;
-                            overflow:hidden;
-                            border-radius:30px;
-                        ">
-
-                            <img src="/assets/images/portfolio/banner2.gif" alt="Scroll Stoping Creative"
-                                style="
-                                    width:100%;
-                                    height:100%;
-                                    object-fit:cover;
-                                    object-position:center;
-                                    display:block;
-                                ">
+                        <div style="width:100%; height:clamp(320px, 52vw, 680px); overflow:hidden; border-radius:30px; background:#f5f5f5;">
+                            <img 
+                                src="/assets/images/portfolio/banner2.gif" 
+                                alt="Scroll Stoping Creative"
+                                width="1200"
+                                height="680"
+                                
+                                    loading="eager"
+                                    fetchpriority="high"
+                                
+                                decoding="async"
+                                style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; border-radius:30px;"
+                            >
                         </div>
 
                         
-                        <div class="portfolio-five__item__content"
-                             style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
-                            
+                        <div class="portfolio-five__item__content" style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
                             <h5 class="portfolio-five__item__cate">Marketing</h5>
 
                             <h3 class="portfolio-five__item__title">
@@ -726,27 +736,22 @@ adsnajah@gmail.com
                     <div class="portfolio-five__item" style="position:relative; overflow:hidden; border-radius:30px;">
 
                         
-                        <div style="
-                            width:100%;
-                            height:680px;
-                            overflow:hidden;
-                            border-radius:30px;
-                        ">
-
-                            <img src="/assets/images/portfolio/banner1.gif" alt="Best Social Media Creative"
-                                style="
-                                    width:100%;
-                                    height:100%;
-                                    object-fit:cover;
-                                    object-position:center;
-                                    display:block;
-                                ">
+                        <div style="width:100%; height:clamp(320px, 52vw, 680px); overflow:hidden; border-radius:30px; background:#f5f5f5;">
+                            <img 
+                                src="/assets/images/portfolio/banner1.gif" 
+                                alt="Best Social Media Creative"
+                                width="1200"
+                                height="680"
+                                
+                                    loading="lazy"
+                                
+                                decoding="async"
+                                style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; border-radius:30px;"
+                            >
                         </div>
 
                         
-                        <div class="portfolio-five__item__content"
-                             style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
-                            
+                        <div class="portfolio-five__item__content" style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
                             <h5 class="portfolio-five__item__cate">Marketing</h5>
 
                             <h3 class="portfolio-five__item__title">
@@ -766,27 +771,22 @@ adsnajah@gmail.com
                     <div class="portfolio-five__item" style="position:relative; overflow:hidden; border-radius:30px;">
 
                         
-                        <div style="
-                            width:100%;
-                            height:680px;
-                            overflow:hidden;
-                            border-radius:30px;
-                        ">
-
-                            <img src="/assets/images/portfolio/car%20boss.gif" alt="Best Car Ad Banner"
-                                style="
-                                    width:100%;
-                                    height:100%;
-                                    object-fit:cover;
-                                    object-position:center;
-                                    display:block;
-                                ">
+                        <div style="width:100%; height:clamp(320px, 52vw, 680px); overflow:hidden; border-radius:30px; background:#f5f5f5;">
+                            <img 
+                                src="/assets/images/portfolio/car%20boss.gif" 
+                                alt="Best Car Ad Banner"
+                                width="1200"
+                                height="680"
+                                
+                                    loading="lazy"
+                                
+                                decoding="async"
+                                style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; border-radius:30px;"
+                            >
                         </div>
 
                         
-                        <div class="portfolio-five__item__content"
-                             style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
-                            
+                        <div class="portfolio-five__item__content" style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
                             <h5 class="portfolio-five__item__cate">Marketing</h5>
 
                             <h3 class="portfolio-five__item__title">
@@ -806,27 +806,22 @@ adsnajah@gmail.com
                     <div class="portfolio-five__item" style="position:relative; overflow:hidden; border-radius:30px;">
 
                         
-                        <div style="
-                            width:100%;
-                            height:680px;
-                            overflow:hidden;
-                            border-radius:30px;
-                        ">
-
-                            <img src="/assets/images/portfolio/new%20social%20media%20design.jpg" alt="Social Medai Post Design"
-                                style="
-                                    width:100%;
-                                    height:100%;
-                                    object-fit:cover;
-                                    object-position:center;
-                                    display:block;
-                                ">
+                        <div style="width:100%; height:clamp(320px, 52vw, 680px); overflow:hidden; border-radius:30px; background:#f5f5f5;">
+                            <img 
+                                src="/assets/images/portfolio/new%20social%20media%20design.jpg" 
+                                alt="Social Medai Post Design"
+                                width="1200"
+                                height="680"
+                                
+                                    loading="lazy"
+                                
+                                decoding="async"
+                                style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; border-radius:30px;"
+                            >
                         </div>
 
                         
-                        <div class="portfolio-five__item__content"
-                             style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
-                            
+                        <div class="portfolio-five__item__content" style="position:absolute; left:0; right:0; bottom:0; z-index:2;">
                             <h5 class="portfolio-five__item__cate">Marketing</h5>
 
                             <h3 class="portfolio-five__item__title">
@@ -844,21 +839,6 @@ adsnajah@gmail.com
         </div>
     </div>
 </section>
-
-<script>
-function resizePortfolioImages() {
-    var images = document.querySelectorAll('.portfolio-five__item div:first-child');
-    if (window.innerWidth < 768) {
-        images.forEach(el => el.style.height = "320px");
-    } else if (window.innerWidth < 992) {
-        images.forEach(el => el.style.height = "500px");
-    } else {
-        images.forEach(el => el.style.height = "680px");
-    }
-}
-window.addEventListener('load', resizePortfolioImages);
-window.addEventListener('resize', resizePortfolioImages);
-</script>
         
 
         
