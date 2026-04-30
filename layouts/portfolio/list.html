@@ -2,8 +2,6 @@
 
 {{ partial "navbarall.html" . }}
 
-
-
 <section class="page-header">
     <div class="page-header__bg"></div>
 
@@ -17,47 +15,60 @@
     </div>
 </section>
 
-
 <section class="portfolio-six">
-<div class="container">
+    <div class="container">
+        <div class="row gutter-y-30 masonry-layout">
 
-<div class="row gutter-y-30 masonry-layout">
+            {{ $limit := site.Params.portfolio_limit | default 12 }}
+            {{ $pages := sort .RegularPages "Date" "desc" }}
 
-{{ range first site.Params.portfolio_limit (sort .Pages "Date" "desc") }}
+            {{ range $index, $page := first $limit $pages }}
 
-<div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
+                <div class="portfolio-six__item" style="position:relative; overflow:hidden; border-radius:30px;">
 
-<div class="portfolio-six__item">
+                    {{ with $page.Params.imagelist }}
+                    <a href="{{ $page.RelPermalink }}" aria-label="{{ $page.Title }}" style="display:block; width:100%; height:clamp(280px, 38vw, 520px); overflow:hidden; border-radius:30px; background:#f5f5f5;">
+                        <img 
+                            src="{{ . | relURL }}" 
+                            alt="{{ $page.Title }}"
+                            width="900"
+                            height="620"
+                            {{ if lt $index 2 }}
+                                loading="eager"
+                                fetchpriority="high"
+                            {{ else }}
+                                loading="lazy"
+                            {{ end }}
+                            decoding="async"
+                            style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; border-radius:30px;"
+                        >
+                    </a>
+                    {{ end }}
 
-<img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}">
+                    <div class="portfolio-six__item__content">
+                        <h3 class="portfolio-six__item__title">
+                            <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+                        </h3>
 
-<div class="portfolio-six__item__content">
+                        <h5 class="portfolio-six__item__cate">
+                            {{ $page.Params.category }}
+                        </h5>
 
-<h3 class="portfolio-six__item__title">
-<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-</h3>
+                        <div class="portfolio-six__item__btn">
+                            <a href="{{ $page.RelPermalink }}" aria-label="View {{ $page.Title }}">
+                                <i class="flaticon-up-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
 
-<h5 class="portfolio-six__item__cate">
-{{ .Params.category }}
-</h5>
+                </div>
+            </div>
 
-<div class="portfolio-six__item__btn">
-<a href="{{ .RelPermalink }}">
-<i class="flaticon-up-right-arrow"></i>
-</a>
-</div>
+            {{ end }}
 
-</div>
-
-</div>
-
-</div>
-
-{{ end }}
-
-</div>
-
-</div>
+        </div>
+    </div>
 </section>
 
 {{ partial "footer.html" . }}
