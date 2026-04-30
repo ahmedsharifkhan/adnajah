@@ -5,7 +5,7 @@ description: "Viral-first TikTok Ads strategy combining UGC creatives and In-Fee
 category: "AD Campaign"
 image: "/assets/images/portfolio/tiktok-ads-banner.svg"
 imagelist: "/assets/images/portfolio/tiktok-ads-banner.svg"
-imgsingle: "/assets/images/portfolio/tiktok-ads-banner.svg"
+imgsingle: "/assets/images/portfolio/tiktok-ads-dashboard 1.png"
 date: 2026-04-03
 client: "Fashion & Lifestyle Brand"
 services:
@@ -20,7 +20,7 @@ end_date: "2025-01-31"
 
 ## Overview
 
-An 8-month TikTok Ads campaign for a fashion and lifestyle brand targeting Gen Z and Millennial buyers. We leveraged the power of UGC-style video creatives and Spark Ads to blend into the organic TikTok feed — making ads feel like content, not interruptions.
+An 8-month TikTok Ads campaign for a fashion and lifestyle brand targeting Gen Z and Millennial buyers. We leveraged UGC-style video creatives and Spark Ads to blend into the organic TikTok feed — making ads feel like content, not interruptions.
 
 ---
 
@@ -43,16 +43,14 @@ An 8-month TikTok Ads campaign for a fashion and lifestyle brand targeting Gen Z
 ## Strategy Breakdown
 
 **Creative-First Approach**
-TikTok rewards content that feels native. Every ad was produced in:
 - **UGC format** — real customers, unboxing videos, honest reviews
 - **Hook testing** — first 3 seconds A/B tested across 12 variations
 - **Trending audio** — licensed sounds matched to campaign timing
-- **Vertical 9:16 native** — no repurposed square or landscape assets
+- **Vertical 9:16 native** — no repurposed assets
 
 **Campaign Structure**
-- **TopView Ads** — for product launches (maximum awareness)
 - **In-Feed Ads** — always-on performance campaigns
-- **Spark Ads** — boosting organic posts that were already performing
+- **Spark Ads** — boosting organic posts already performing well
 - **Retargeting** — video viewers (25%, 50%, 75%, 100%) segmented separately
 
 **Audience Targeting**
@@ -68,17 +66,43 @@ TikTok rewards content that feels native. Every ad was produced in:
 
 - Winning creatives scaled from $500/day to $3,000/day in 48 hours
 - Monthly creative refresh cycle to beat ad fatigue
-- TikTok Shop integration for seamless in-app checkout
 
 ---
 
-## Results Screenshots
+## Campaign Screenshots
 
-![TikTok Campaign Performance](/assets/images/portfolio/content%20watching.jpg)
+![TikTok Ads Campaign Dashboard](/assets/images/portfolio/tiktok-ads-dashboard%201.png)
+**Campaign Dashboard Overview** — Full TikTok Ads Manager view showing total spend, reach, video views, and overall ROAS.
 
-![Video Ad Creative Results](/assets/images/portfolio/content%20watching%20with%20smiling%20face.jpg)
+---
 
-![Conversion Dashboard](/assets/images/portfolio/Conversion%20Tracking.gif)
+![TikTok Ads Video Performance](/assets/images/portfolio/Tiktok-Ads-Dashboard%202.png)
+**Video Performance Metrics** — Video view rate, 68% completion rate, and average watch time per creative.
+
+---
+
+![TikTok Ads Audience Reach](/assets/images/portfolio/Tiktok-Ads-Dashboard%203.png)
+**Audience Reach & Frequency** — Unique reach, impression share, and frequency data across all ad sets.
+
+---
+
+![TikTok Ads Results Summary](/assets/images/portfolio/TikTok-Ads-Results%207.png)
+**Final Campaign Results** — 6.3x ROAS with 12.4M video views and 3,240 conversions at $13.89 cost per purchase.
+
+---
+
+![TikTok Ads Creative Performance](/assets/images/portfolio/tiktok%204.png)
+**Creative-Level Performance** — Top UGC and Spark Ad creatives ranked by conversion rate and ROAS.
+
+---
+
+![TikTok Ads Conversion Data](/assets/images/portfolio/tiktok%205.png)
+**TikTok Pixel Conversion Data** — Purchase events, Add-to-Cart, and checkout initiation tracked through TikTok Pixel.
+
+---
+
+![TikTok In-Feed Ad Results](/assets/images/portfolio/tiktok%206.webp)
+**In-Feed Ad Performance** — CTR of 2.8%, CPM of $8.50, and cost-per-click data across all active ad placements.
 
 ---
 

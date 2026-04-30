@@ -1,0 +1,111 @@
+{{ define "main" }}
+
+{{ partial "navbarall.html" . }}
+
+<style>
+    .blog-post-content h2 { color: #26134d; font-weight: 700; margin: 40px 0 16px; font-size: 26px; }
+    .blog-post-content h3 { color: #26134d; font-weight: 600; margin: 32px 0 12px; font-size: 20px; }
+    .blog-post-content p { color: #555; line-height: 1.9; margin-bottom: 20px; font-size: 16px; }
+    .blog-post-content ul, .blog-post-content ol { color: #555; line-height: 2; padding-left: 24px; margin-bottom: 20px; }
+    .blog-post-content hr { border: none; border-top: 1px solid rgba(108,77,246,0.15); margin: 40px 0; }
+    .blog-post-content strong { color: #26134d; }
+    .blog-post-content a { color: #6c4df6; }
+    .blog-post-content table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    .blog-post-content table th { background: #6c4df6; color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; }
+    .blog-post-content table td { padding: 12px 16px; border-bottom: 1px solid rgba(108,77,246,0.1); color: #555; }
+    .blog-post-content table tr:nth-child(even) td { background: rgba(108,77,246,0.04); }
+</style>
+
+<section class="page-header page-header--details">
+    <div class="page-header__bg"></div>
+    <div class="container">
+        <h2 class="page-header__title">{{ .Title }}</h2>
+        <ul class="growim-breadcrumb list-unstyled">
+            <li><a href="{{ "/" | relURL }}">Home</a></li>
+            <li><a href="{{ "/blog/" | relURL }}">Blog</a></li>
+            <li><span>{{ .Title }}</span></li>
+        </ul>
+    </div>
+</section>
+
+<section style="padding: 80px 0;">
+    <div class="container">
+        <div class="row gutter-y-60">
+
+            <div class="col-md-12 col-lg-8">
+
+                {{ if .Params.image }}
+                <div style="margin-bottom: 30px; border-radius: 16px; overflow: hidden;">
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+                </div>
+                {{ end }}
+
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px; flex-wrap: wrap;">
+                    {{ if .Params.category }}
+                    <a class="blog-card__meta__cat" href="#">{{ .Params.category }}</a>
+                    {{ end }}
+                    <span style="color: #888; font-size: 14px;"><i class="fas fa-calendar-alt" style="margin-right:6px;"></i>{{ .Date.Format "January 2, 2006" }}</span>
+                    <span style="color: #888; font-size: 14px;"><i class="fas fa-user" style="margin-right:6px;"></i>{{ if .Params.author }}{{ .Params.author }}{{ else }}Ad Najah{{ end }}</span>
+                </div>
+
+                <div class="blog-post-content">
+                    {{ .Content }}
+                </div>
+
+                <div style="margin-top: 50px; padding: 30px; background: linear-gradient(135deg, rgba(108,77,246,0.08), rgba(75,32,232,0.06)); border-radius: 16px; border-left: 4px solid #6c4df6;">
+                    <h4 style="color: #26134d; font-weight: 700; margin-bottom: 10px;">Ready to Grow Your Business?</h4>
+                    <p style="color: #555; margin-bottom: 20px;">Talk to our digital marketing experts and get a free strategy consultation.</p>
+                    <a href="{{ "/contact/" | relURL }}" class="growim-btn">
+                        <span class="growim-btn__text">Get Free Consultation</span>
+                        <span class="growim-btn__icon"><i class="flaticon-up-right-arrow"></i></span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-md-12 col-lg-4">
+                <div class="service-sidebar">
+
+                    <div class="service-sidebar__single">
+                        <h3 class="service-sidebar__title">Recent Posts</h3>
+                        <ul class="list-unstyled service-sidebar__nav">
+                            {{ range first 5 (where site.RegularPages "Section" "blog") }}
+                            <li class="{{ if eq .RelPermalink $.RelPermalink }}current{{ end }}">
+                                <a href="{{ .RelPermalink }}">{{ .Title }}<span class="service-arrow">→</span></a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+
+                    <div class="service-sidebar__single">
+                        <h3 class="service-sidebar__title">Our Services</h3>
+                        <ul class="list-unstyled service-sidebar__nav">
+                            <li><a href="{{ "/services/meta-ads/" | relURL }}">Meta Ads<span class="service-arrow">→</span></a></li>
+                            <li><a href="{{ "/services/google-ads/" | relURL }}">Google Ads<span class="service-arrow">→</span></a></li>
+                            <li><a href="{{ "/services/social-media-marketing/" | relURL }}">Social Media Marketing<span class="service-arrow">→</span></a></li>
+                            <li><a href="{{ "/services/social-media-creatives/" | relURL }}">Creative Design<span class="service-arrow">→</span></a></li>
+                            <li><a href="{{ "/services/pixel-setup/" | relURL }}">Pixel Setup<span class="service-arrow">→</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="service-sidebar__single service-sidebar__contact text-center" style="background-image: url({{ "/assets/images/backgrounds/contact-bg-1-1.jpg" | relURL }});">
+                        <div class="service-sidebar__contact__icon">
+                            <i class="flaticon-phone"></i>
+                        </div>
+                        <p class="service-sidebar__contact__number">
+                            <span>Free Consultation</span>
+                            <a href="tel:+8801310994358">+8801310994358</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ partial "js.html" . }}
+
+{{ end }}

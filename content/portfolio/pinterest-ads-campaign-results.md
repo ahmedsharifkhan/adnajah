@@ -5,7 +5,7 @@ description: "Pinterest Shopping and Promoted Pins campaign achieving 7.1x ROAS 
 category: "AD Campaign"
 image: "/assets/images/portfolio/pinterest-ads-banner.svg"
 imagelist: "/assets/images/portfolio/pinterest-ads-banner.svg"
-imgsingle: "/assets/images/portfolio/pinterest-ads-banner.svg"
+imgsingle: "/assets/images/portfolio/pinterest ad 1.png"
 date: 2026-04-01
 client: "Home Decor & Lifestyle Brand"
 services:
@@ -20,7 +20,7 @@ end_date: "2024-12-31"
 
 ## Overview
 
-An 8-month Pinterest Ads campaign for a home decor and lifestyle brand. Pinterest is a unique platform — users come to discover and plan purchases, not just scroll. We turned that high purchase intent into consistent revenue through visually-dominant Shopping ads and Promoted Pins.
+An 8-month Pinterest Ads campaign for a home decor and lifestyle brand. Pinterest users come to discover and plan purchases — not just scroll. We turned that high purchase intent into consistent revenue through visually-dominant Shopping ads and Promoted Pins.
 
 ---
 
@@ -43,14 +43,13 @@ An 8-month Pinterest Ads campaign for a home decor and lifestyle brand. Pinteres
 ## Strategy Breakdown
 
 **Pinterest-Specific Approach**
-Pinterest is a visual search engine. We treated every ad like a premium magazine spread:
 - **Vertical 2:3 ratio** pins for maximum feed real estate
 - **Text overlay** headlines on lifestyle images for immediate context
 - **Seasonal campaigns** aligned with Pinterest's natural search spikes
 - **Catalog integration** — product feed synced for automatic Shopping ads
 
 **Campaign Types**
-- **Shopping Ads** — product catalog auto-synced for dynamic inventory ads
+- **Shopping Ads** — product catalog auto-synced for dynamic inventory
 - **Promoted Pins** — curated lifestyle content driving brand discovery
 - **Collections Ads** — hero image + 3 product thumbnails for higher AOV
 - **Retargeting** — website visitors and past purchasers via Pinterest Tag
@@ -58,8 +57,7 @@ Pinterest is a visual search engine. We treated every ad like a premium magazine
 **Audience Strategy**
 - **Actalike audiences** (Pinterest's lookalike equivalent)
 - **Interest targeting** — Home Decor, Interior Design, DIY, Minimalism
-- **Keyword targeting** — Treat Pinterest like a search engine (it is one)
-- **Engagement retargeting** — Pin engagers + video viewers
+- **Keyword targeting** — Pinterest treated as a visual search engine
 
 ---
 
@@ -69,20 +67,33 @@ Pinterest is a visual search engine. We treated every ad like a premium magazine
 
 - Pinterest users have **87% higher purchase intent** than other social platforms
 - Our $0.85 CPC beat the platform average of $1.50 by 43%
-- Seasonal spikes (Holiday, Back-to-School) planned 6 weeks in advance
-- Organic pin strategy amplified paid results by 2.4x
 
 ---
 
-## Results Screenshots
+## Campaign Screenshots
 
-![Pinterest Campaign Dashboard](/assets/images/portfolio/dispay%20design.jpg)
+![Pinterest Ads Campaign Dashboard](/assets/images/portfolio/pinterest%20ad%201.png)
+**Campaign Dashboard Overview** — Total spend, 3.35M+ impressions, 48K saves, and ROAS across all Pinterest campaigns.
 
-![Shopping Ads Performance](/assets/images/portfolio/ad%20design%20creativwe.jpg)
+---
 
-![Visual Creative Results](/assets/images/portfolio/phone%20display.jpg)
+![Pinterest Shopping Ads Performance](/assets/images/portfolio/pinterest-ads-%202.png)
+**Shopping Ads Results** — Product-level performance showing revenue, conversion rate, and CPC for top-selling items.
 
-![Conversion Tracking](/assets/images/portfolio/Conversion%20Tracking.gif)
+---
+
+![Pinterest Pin Saves Data](/assets/images/portfolio/pinterest%203.png)
+**Promoted Pin Engagement** — 48,000 saves generating free organic reach long after the paid campaign ended.
+
+---
+
+![Pinterest Conversion Revenue](/assets/images/portfolio/pinterest%204.png)
+**Conversion & Revenue Tracking** — $202,350 in revenue at 7.1x ROAS with 1,640 total conversions via Pinterest Tag.
+
+---
+
+![Pinterest Audience Insights](/assets/images/portfolio/pinterest%20%205.png)
+**Audience Demographics** — Breakdown by gender, age, and interest categories confirming alignment with the home decor buyer persona.
 
 ---
 

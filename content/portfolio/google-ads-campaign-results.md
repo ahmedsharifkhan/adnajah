@@ -5,7 +5,7 @@ description: "High-intent Google Search & Shopping campaign driving 8.5x ROAS wi
 category: "AD Campaign"
 image: "/assets/images/portfolio/google-ads-banner.svg"
 imagelist: "/assets/images/portfolio/google-ads-banner.svg"
-imgsingle: "/assets/images/portfolio/google-ads-banner.svg"
+imgsingle: "/assets/images/portfolio/Google_Ads 1.png"
 date: 2026-04-04
 client: "Retail E-Commerce"
 services:
@@ -71,13 +71,40 @@ A 12-month Google Ads engagement combining Search, Shopping, and Performance Max
 
 ---
 
-## Results Screenshots
+## Campaign Screenshots
 
-![Google Ads Dashboard](/assets/images/portfolio/ad%20creative.jpg)
+![Google Ads Campaign Dashboard](/assets/images/portfolio/Google_Ads%201.png)
+**Campaign Dashboard Overview** — Total spend, impressions, clicks, and conversions across all Search and Shopping campaigns.
 
-![Search Campaign Performance](/assets/images/portfolio/ad%20er%20testing%20result.jpg)
+---
 
-![Conversion Tracking](/assets/images/portfolio/Conversion%20Tracking.gif)
+![Google Ads Keyword Performance](/assets/images/portfolio/Google_Ads%202.png)
+**Keyword Performance Report** — Top keywords by conversion volume, CPC, CTR, and Quality Score.
+
+---
+
+![Google Ads Results](/assets/images/portfolio/Google-Ads-Results%203.webp)
+**Revenue & Conversion Results** — $722,500 in total revenue with 1,847 conversions over the 12-month campaign.
+
+---
+
+![Google Ads Ad Group Performance](/assets/images/portfolio/google%20ads%204.png)
+**Ad Group Performance Breakdown** — CTR, CPC, and conversion rate data across all ad groups.
+
+---
+
+![Google Ads Quality Score](/assets/images/portfolio/google%20ads%205.png)
+**Quality Score & Ad Rank Analysis** — Average Quality Score of 8.4/10 driving lower CPCs and better ad positions.
+
+---
+
+![Google Ads Shopping Campaign](/assets/images/portfolio/Google-Ads-%206.webp)
+**Shopping Campaign Results** — Product-level performance showing best-selling categories and ROAS by product group.
+
+---
+
+![Google Search Campaign Structure](/assets/images/portfolio/Search-Campaign-%20google%20ads.png)
+**Search Campaign Structure** — Ad group architecture and keyword match type breakdown for the top-performing search campaign.
 
 ---
 

@@ -5,7 +5,7 @@ description: "B2B LinkedIn Ads campaign generating 762 qualified leads at $42 CP
 category: "AD Campaign"
 image: "/assets/images/portfolio/linkedin-ads-banner.svg"
 imagelist: "/assets/images/portfolio/linkedin-ads-banner.svg"
-imgsingle: "/assets/images/portfolio/linkedin-ads-banner.svg"
+imgsingle: "/assets/images/portfolio/linkedin-ad- 1.webp"
 date: 2026-04-02
 client: "SaaS / B2B Company"
 services:
@@ -43,7 +43,6 @@ A 9-month LinkedIn Ads engagement for a B2B SaaS company targeting decision-make
 ## Strategy Breakdown
 
 **Targeting Precision**
-LinkedIn's targeting is unmatched for B2B. We layered:
 - **Job Title** — VP, Director, C-Level, Head of [Department]
 - **Company Size** — 50–500 employees (ideal ICP)
 - **Industry** — SaaS, Tech, Professional Services
@@ -70,17 +69,33 @@ LinkedIn's targeting is unmatched for B2B. We layered:
 - Lead Gen Forms converted at **14.3%** (industry avg: 8–10%)
 - 31% of leads converted to sales opportunities
 - LinkedIn was the **#1 source** of pipeline for 6 consecutive months
-- Retargeting website visitors on LinkedIn closed the loop from paid search
 
 ---
 
-## Results Screenshots
+## Campaign Screenshots
 
-![LinkedIn Campaign Dashboard](/assets/images/portfolio/social%20prof.jpg)
+![LinkedIn Ads Campaign Overview](/assets/images/portfolio/linkedin-ad-%201.webp)
+**Campaign Overview & Total Spend** — Full dashboard showing $32,000 spend, 890K+ impressions, and 762 total leads generated.
 
-![Lead Generation Results](/assets/images/portfolio/ad%20result%20good.jpg)
+---
 
-![B2B Campaign Performance](/assets/images/portfolio/ad%20er%20testing%20result.jpg)
+![LinkedIn Ads Lead Generation Results](/assets/images/portfolio/linkedin-ads-%202.png)
+**Lead Generation Form Performance** — Lead Gen Form converting at 14.3% — above the platform average of 8–10%.
+
+---
+
+![LinkedIn Ads Audience Demographics](/assets/images/portfolio/linkedin-ads-%203.png)
+**Audience Demographics** — Lead breakdown by job title, seniority level, industry, and company size confirming ICP alignment.
+
+---
+
+![LinkedIn Ads Creative Performance](/assets/images/portfolio/linkedin-ads%204.png)
+**Sponsored Content Performance** — Engagement metrics for each ad creative including CTR, impressions, and lead volume.
+
+---
+
+![LinkedIn Ads CPL Tracking](/assets/images/portfolio/linkedin_ads_%205.png)
+**CPL & Pipeline ROAS Tracking** — Cost per lead at $42 with 5.2x pipeline ROAS confirmed through CRM integration.
 
 ---
 
