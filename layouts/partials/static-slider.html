@@ -1,4 +1,4 @@
-<!-- main-slider-start -->
+﻿<!-- main-slider-start -->
         <section class="main-banner-three">
             <div class="main-banner-three__bg" style="background-image: url(assets/images/shapes/main-banner-bg-3.png);"></div><!-- main-banner-three__bg -->
             <div class="container-fluid">
@@ -26,13 +26,12 @@
                     <div class="main-banner-three__image__border">
                         <img src="{{ "/assets/images/shapes/banner-image-border.png" | relURL }}" alt="growim">
                     </div>
-                    <img src="{{ "/assets/images/backgrounds/banner-three.jpg" | relURL }}" alt="growim">
+                    <img src="{{ "/assets/images/backgrounds/banner-three.png" | relURL }}" alt="growim">
                     <div class="main-banner-three__image__clients wow fadeInUp" data-wow-delay="450ms">
-                        <img src="{{ "/assets/images/resources/client-1-1.png" | relURL }}" alt="growim">
-                        <img src="{{ "/assets/images/resources/client-1-2.png" | relURL }}" alt="growim">
-                        <img src="{{ "/assets/images/resources/client-1-3.png" | relURL }}" alt="growim">
-                        <img src="{{ "/assets/images/resources/client-1-4.png" | relURL }}" alt="growim">
-                        <span>500+ Happy Clients</span>
+                        {{ range site.Data.home.banner.clients }}
+                        <img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy">
+                        {{ end }}
+                        <span>{{ site.Data.home.banner.clients_label }}</span>
                     </div>
                 </div>
             </div>

@@ -3,15 +3,158 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>{{ .Title }} | {{ .Site.Title }}</title>
+{{/* ── Page-level variables ── */}}
+{{ $title       := printf "%s | %s" .Title site.Title }}
+{{ $description := .Params.description | default site.Params.description }}
+{{ $permalink   := .Permalink }}
+{{ $ogImage     := site.Params.og_image }}
+{{ with .Params.image }}
+  {{ $ogImage = . | absURL }}
+{{ end }}
+
+<title>{{ $title }}</title>
+
+<!-- Primary Meta -->
+<meta name="description" content="{{ $description }}" />
+<meta name="author" content="{{ site.Params.author }}" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="{{ $permalink }}" />
+
+<!-- Open Graph — Facebook, WhatsApp, LinkedIn -->
+<meta property="og:type"        content="{{ if .IsHome }}website{{ else }}article{{ end }}" />
+<meta property="og:title"       content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:url"         content="{{ $permalink }}" />
+<meta property="og:site_name"   content="{{ site.Title }}" />
+<meta property="og:image"       content="{{ $ogImage }}" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale"      content="en_US" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site"        content="{{ site.Params.twitter_handle }}" />
+<meta name="twitter:title"       content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image"       content="{{ $ogImage }}" />
+
+<!-- JSON-LD Structured Data -->
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Ad Najah",
+  "url": "https://adnajah.com",
+  "logo": "https://adnajah.com/assets/images/favicons/apple-touch-ad-najah.png",
+  "image": "https://adnajah.com/assets/images/favicons/apple-touch-ad-najah.png",
+  "description": "{{ site.Params.description }}",
+  "telephone": "+8801310994358",
+  "email": "adsnajah@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mirpur",
+    "addressLocality": "Dhaka",
+    "addressRegion": "Dhaka",
+    "addressCountry": "BD"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "23.8131",
+    "longitude": "90.3498"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Saturday"],
+      "opens": "10:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/adsnajah",
+    "https://www.linkedin.com/company/adsnajah",
+    "https://www.instagram.com/adsnajah",
+    "https://www.behance.net/adsnajah"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Marketing Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta Ads" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Marketing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Creative Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video Editing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Server-Side Tracking" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Page Design" } }
+    ]
+  }
+}
+</script>
+{{ else if and (eq .Section "blog") (not .IsSection) }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "description": "{{ $description }}",
+  "image": "{{ $ogImage }}",
+  "url": "{{ $permalink }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Ad Najah",
+    "url": "https://adnajah.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ad Najah",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://adnajah.com/assets/images/favicons/apple-touch-ad-najah.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ $permalink }}"
+  }
+}
+</script>
+{{ else if and (eq .Section "services") (not .IsSection) }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ .Title }}",
+  "description": "{{ $description }}",
+  "url": "{{ $permalink }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Ad Najah",
+    "url": "https://adnajah.com",
+    "telephone": "+8801310994358"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Bangladesh"
+  }
+}
+</script>
+{{ end }}
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ "assets/images/favicons/apple-touch-ad-najah.png" | relURL }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ "assets/images/favicons/photoshop favicon 32 x 32.png" | relURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ "assets/images/favicons/photo shop 16 x 16.png" | relURL }}">
 <link rel="manifest" href="{{ "assets/images/favicons/site.webmanifest" | relURL }}">
-
-<meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}Ad Najah is a results-driven digital marketing agency in Dhaka, Bangladesh — Meta Ads, Google Ads, Social Media Marketing &amp; Creative Design.{{ end }}" />
 
 <!-- DNS Prefetch -->
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -23,25 +166,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Preload LCP hero background image -->
-<link rel="preload" href="{{ "assets/images/backgrounds/slider-1-1.png" | relURL }}" as="image" fetchpriority="high">
+<link rel="preload" href="{{ "assets/images/backgrounds/banner-three.png" | relURL }}" as="image" fetchpriority="high">
 
-<!-- ═══════════════════════════════════════════
-     CRITICAL CSS — loaded synchronously
-     (bootstrap layout + main template styles)
-════════════════════════════════════════════ -->
+<!-- CRITICAL CSS — loaded synchronously -->
 <link rel="stylesheet" href="{{ "assets/vendors/bootstrap/css/bootstrap.min.css" | relURL }}">
 <link rel="stylesheet" href="{{ "assets/css/growim.css" | relURL }}">
 
-<!-- ═══════════════════════════════════════════
-     NON-CRITICAL CSS — loaded asynchronously
-     (no render-blocking penalty)
-════════════════════════════════════════════ -->
-
-<!-- Google Fonts async -->
+<!-- NON-CRITICAL CSS — loaded asynchronously -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"></noscript>
 
-<!-- Vendor CSS async -->
 <link rel="preload" href="{{ "assets/vendors/bootstrap-select/bootstrap-select.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ "assets/vendors/bootstrap-select/bootstrap-select.min.css" | relURL }}"></noscript>
 
@@ -83,4 +217,3 @@
 
 <link rel="preload" href="{{ "assets/vendors/owl-carousel/css/owl.theme.default.min.css" | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ "assets/vendors/owl-carousel/css/owl.theme.default.min.css" | relURL }}"></noscript>
-

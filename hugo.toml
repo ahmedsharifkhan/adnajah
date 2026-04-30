@@ -1,7 +1,7 @@
 
 baseURL = "https://adnajah.com/"
 languageCode = "en-us"
-title = "AdNajah"
+title = "Ad Najah"
 
 [[menu.main]]
 name = "Services"
@@ -18,6 +18,10 @@ weight = 4
 
 [params]
 portfolio_limit = 20
+description = "Ad Najah is a results-driven digital marketing agency in Dhaka, Bangladesh. We help brands grow with Meta Ads, Google Ads, Social Media Marketing, Creative Design, and Performance Tracking."
+og_image = "https://adnajah.com/assets/images/favicons/apple-touch-ad-najah.png"
+twitter_handle = "@adsnajah"
+author = "Ad Najah"
 
 
 [params.tracking]

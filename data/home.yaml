@@ -1,0 +1,27 @@
+banner:
+  clients:
+    - image: "/assets/images/resources/Arif Hasan.jpg"
+      alt: "Arif Hasan"
+    - image: "/assets/images/resources/Jannatul FerdousHasan.jpg"
+      alt: "Jannatul FerdousHasan"
+    - image: "/assets/images/resources/Mahmud Karim.jpg"
+      alt: "Mahmud Karim"
+    - image: "/assets/images/resources/Nabila Islam.jpg"
+      alt: "Nabila Islam"
+    - image: "/assets/images/resources/Rakib Hossain.jpg"
+      alt: "Rakib Hossain"
+  clients_label: "500+ Happy Clients"
+
+stats:
+  - icon: "flaticon-client"
+    number: 500
+    label: "Satisfied Clients"
+  - icon: "flaticon-seo"
+    number: 500
+    label: "Finished Projects"
+  - icon: "flaticon-marketing"
+    number: 10
+    label: "Skilled Experts"
+  - icon: "flaticon-media"
+    number: 550
+    label: "Media Posts"
