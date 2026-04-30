@@ -1,0 +1,177 @@
+{{ define "main" }}
+
+{{ partial "navbarall.html" . }}
+
+<style>
+img, svg {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ── Landing Page Slider ── */
+.lp-slider-section {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.lp-slider-section__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #26134d;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(123,77,255,0.15);
+}
+.lp-slider-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 56px rgba(18, 8, 60, 0.14);
+    position: relative;
+}
+.lp-slider-wrap .owl-carousel .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.lp-slider-wrap .owl-nav button.owl-prev,
+.lp-slider-wrap .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    background: rgba(123, 77, 255, 0.88) !important;
+    border-radius: 50% !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s;
+    z-index: 10;
+}
+.lp-slider-wrap .owl-nav button.owl-prev:hover,
+.lp-slider-wrap .owl-nav button.owl-next:hover {
+    background: #4b20e8 !important;
+}
+.lp-slider-wrap .owl-nav button.owl-prev { left: 18px; }
+.lp-slider-wrap .owl-nav button.owl-next { right: 18px; }
+.lp-slider-wrap .owl-dots {
+    position: absolute;
+    bottom: 14px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+.lp-slider-wrap .owl-dots .owl-dot span {
+    background: rgba(255,255,255,0.55) !important;
+    width: 10px;
+    height: 10px;
+}
+.lp-slider-wrap .owl-dots .owl-dot.active span {
+    background: #7b4dff !important;
+}
+.lp-slider-wrap .owl-carousel {
+    position: relative;
+}
+
+/* slide counter badge */
+.lp-slider-counter {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #7b4dff;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+</style>
+
+
+<section class="page-header page-header--details">
+    <div class="page-header__bg"></div>
+    <div class="container">
+        <h2 class="page-header__title">{{ .Title }}</h2>
+        <ul class="growim-breadcrumb list-unstyled">
+            <li><a href="/">Home</a></li>
+            <li><a href="/portfolio/">Portfolio</a></li>
+            <li><span>{{ .Title }}</span></li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="portfolio-details">
+<div class="container">
+
+{{/* ── Hero image — same as all other portfolios ── */}}
+<div class="portfolio-details__image">
+    <img src="{{ .Params.imgsingle | relURL }}" alt="{{ .Title }}">
+</div>
+
+<div class="row">
+
+<div class="col-lg-8">
+<div class="portfolio-details__content">
+<h3 class="portfolio-details__title">{{ .Title }}</h3>
+<p class="portfolio-details__text">
+{{ .Content }}
+</p>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="portfolio-details__info">
+<h3 class="portfolio-details__info__title">Project Information</h3>
+<ul class="portfolio-details__info__list">
+<li><span>Client:</span> {{ .Params.client }}</li>
+<li><span>Category:</span> {{ .Params.category }}</li>
+<li><span>Start Date:</span> {{ .Params.start_date }}</li>
+<li><span>End Date:</span> {{ .Params.end_date }}</li>
+<li><span>Project Budget:</span> {{ .Params.budget }}</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+{{/* ── Landing Page Slider ── */}}
+{{ if .Params.slides }}
+<div class="lp-slider-section">
+    <h4 class="lp-slider-section__title">Landing Page Designs</h4>
+    <div class="lp-slider-wrap">
+        <div class="growim-owl__carousel" data-owl-options='{"loop":true,"margin":0,"nav":true,"dots":true,"autoplay":true,"autoplayTimeout":3500,"autoplayHoverPause":true,"items":1,"navText":["&#8249;","&#8250;"]}'>
+            {{ range .Params.slides }}
+            <div class="item">
+                <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    <span class="lp-slider-counter">{{ len .Params.slides }} Landing Pages</span>
+</div>
+{{ end }}
+
+
+<div class="portfolio-details__pagination">
+{{ with .PrevInSection }}
+<a class="portfolio-details__pagination__item" href="{{ .RelPermalink }}">
+<img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}">
+Previous
+</a>
+{{ end }}
+{{ with .NextInSection }}
+<a class="portfolio-details__pagination__item" href="{{ .RelPermalink }}">
+Next
+<img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}">
+</a>
+{{ end }}
+</div>
+
+</div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ partial "js.html" . }}
+
+{{ end }}
