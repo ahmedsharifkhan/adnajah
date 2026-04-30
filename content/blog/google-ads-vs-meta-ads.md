@@ -3,7 +3,7 @@ title: "Google Ads vs Meta Ads: Which Is Better for Your Business?"
 slug: "google-ads-vs-meta-ads"
 description: "Google Ads and Meta Ads are both powerful — but they work very differently. Here's how to choose the right platform for your business goals."
 category: "Paid Ads"
-image: "/assets/images/blog/blog-1-2.png"
+image: "/assets/images/portfolio/Google_Ads 2.png"
 date: 2026-03-25
 author: "Ad Najah"
 ---

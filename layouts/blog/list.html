@@ -2,6 +2,9 @@
 
 {{ partial "navbarall.html" . }}
 
+{{ $limit := site.Data.blog.list_limit | default 6 }}
+{{ $posts := first $limit (sort .Pages "Date" "desc") }}
+
 <section class="page-header">
     <div class="page-header__bg"></div>
     <div class="container">
@@ -16,40 +19,36 @@
 <section class="blog-one" style="padding: 80px 0;">
     <div class="container">
 
-        {{ if .Pages }}
+        {{ if $posts }}
         <div class="row gutter-y-30">
-            {{ range .Pages }}
+            {{ range $i, $post := $posts }}
             <div class="col-lg-4 col-md-6">
-                <div class="blog-card wow fadeInUp">
+                <div class="blog-card wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="{{ mul $i 100 }}ms">
                     <div class="blog-card__image">
-                        {{ if .Params.image }}
-                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
-                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
-                        {{ else }}
-                        <img src="{{ "/assets/images/blog/blog-1-1.png" | relURL }}" alt="{{ .Title }}" loading="lazy">
-                        <img src="{{ "/assets/images/blog/blog-1-1.png" | relURL }}" alt="{{ .Title }}" loading="lazy">
-                        {{ end }}
-                        <a href="{{ .RelPermalink }}" class="blog-card__image__link">
-                            <span class="sr-only">{{ .Title }}</span>
+                        {{ $img := $post.Params.image | default "/assets/images/blog/blog-1-1.png" }}
+                        <img src="{{ $img | relURL }}" alt="{{ $post.Title }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
+                        <img src="{{ $img | relURL }}" alt="{{ $post.Title }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
+                        <a href="{{ $post.RelPermalink }}" class="blog-card__image__link">
+                            <span class="sr-only">{{ $post.Title }}</span>
                         </a>
                     </div>
                     <div class="blog-card__content">
                         <div class="blog-card__meta">
-                            {{ if .Params.category }}
-                            <a class="blog-card__meta__cat" href="#">{{ .Params.category }}</a>
+                            {{ with $post.Params.category }}
+                            <a class="blog-card__meta__cat" href="#">{{ . }}</a>
                             {{ end }}
-                            <div class="blog-card__meta__date">{{ .Date.Format "January 2, 2006" }}</div>
+                            <div class="blog-card__meta__date">{{ $post.Date.Format "January 2, 2006" }}</div>
                         </div>
-                        <h3 class="blog-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <h3 class="blog-card__title"><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></h3>
                         <div class="blog-card__bottom">
                             <div class="blog-card__author">
-                                <img src="{{ "/assets/images/blog/blog-author-1-1.jpg" | relURL }}" alt="Ad Najah">
+                                <img src="{{ "/assets/images/favicons/apple-touch-ad-najah.png" | relURL }}" alt="Ad Najah">
                                 <div class="blog-card__author__content">
                                     <span><a href="{{ "/" | relURL }}">Ad Najah</a></span>
-                                    {{ if .Params.author }}{{ .Params.author }}{{ else }}Team{{ end }}
+                                    {{ $post.Params.author | default "Ad Najah" }}
                                 </div>
                             </div>
-                            <a href="{{ .RelPermalink }}" class="blog-card__link">
+                            <a href="{{ $post.RelPermalink }}" class="blog-card__link">
                                 <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>

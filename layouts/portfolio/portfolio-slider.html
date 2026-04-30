@@ -22,61 +22,58 @@ img, svg {
     padding-bottom: 12px;
     border-bottom: 2px solid rgba(123,77,255,0.15);
 }
-.lp-slider-wrap {
+.lp-carousel-wrap {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 16px 56px rgba(18, 8, 60, 0.14);
     position: relative;
+    background: #111;
 }
-.lp-slider-wrap .owl-carousel .item img {
+.lp-carousel-wrap .carousel-item img {
     width: 100%;
     height: auto;
     display: block;
 }
-.lp-slider-wrap .owl-nav button.owl-prev,
-.lp-slider-wrap .owl-nav button.owl-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+/* custom prev/next buttons */
+.lp-carousel-wrap .carousel-control-prev,
+.lp-carousel-wrap .carousel-control-next {
     width: 52px;
     height: 52px;
-    background: rgba(123, 77, 255, 0.88) !important;
-    border-radius: 50% !important;
-    color: #fff !important;
-    font-size: 20px !important;
-    line-height: 1 !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    background: rgba(123,77,255,0.88);
+    border-radius: 50%;
+    opacity: 1;
     transition: background 0.25s;
-    z-index: 10;
 }
-.lp-slider-wrap .owl-nav button.owl-prev:hover,
-.lp-slider-wrap .owl-nav button.owl-next:hover {
-    background: #4b20e8 !important;
+.lp-carousel-wrap .carousel-control-prev { left: 18px; }
+.lp-carousel-wrap .carousel-control-next { right: 18px; }
+.lp-carousel-wrap .carousel-control-prev:hover,
+.lp-carousel-wrap .carousel-control-next:hover {
+    background: #4b20e8;
+    opacity: 1;
 }
-.lp-slider-wrap .owl-nav button.owl-prev { left: 18px; }
-.lp-slider-wrap .owl-nav button.owl-next { right: 18px; }
-.lp-slider-wrap .owl-dots {
-    position: absolute;
-    bottom: 14px;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
+.lp-carousel-wrap .carousel-control-prev-icon,
+.lp-carousel-wrap .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
 }
-.lp-slider-wrap .owl-dots .owl-dot span {
-    background: rgba(255,255,255,0.55) !important;
+/* dot indicators */
+.lp-carousel-wrap .carousel-indicators {
+    margin-bottom: 12px;
+}
+.lp-carousel-wrap .carousel-indicators [data-bs-target] {
     width: 10px;
     height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    border: none;
+    opacity: 1;
 }
-.lp-slider-wrap .owl-dots .owl-dot.active span {
-    background: #7b4dff !important;
+.lp-carousel-wrap .carousel-indicators .active {
+    background: #7b4dff;
 }
-.lp-slider-wrap .owl-carousel {
-    position: relative;
-}
-
-/* slide counter badge */
 .lp-slider-counter {
     display: inline-block;
     margin-top: 14px;
@@ -135,17 +132,39 @@ img, svg {
 
 </div>
 
-{{/* ── Landing Page Slider ── */}}
+{{/* ── Bootstrap Carousel Slider ── */}}
 {{ if .Params.slides }}
 <div class="lp-slider-section">
     <h4 class="lp-slider-section__title">Landing Page Designs</h4>
-    <div class="lp-slider-wrap">
-        <div class="growim-owl__carousel" data-owl-options='{"loop":true,"margin":0,"nav":true,"dots":true,"autoplay":true,"autoplayTimeout":3500,"autoplayHoverPause":true,"items":1,"navText":["&#8249;","&#8250;"]}'>
-            {{ range .Params.slides }}
-            <div class="item">
-                <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+    <div class="lp-carousel-wrap">
+        <div id="lpCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+
+            {{/* dot indicators */}}
+            <div class="carousel-indicators">
+                {{ range $i, $slide := .Params.slides }}
+                <button type="button" data-bs-target="#lpCarousel" data-bs-slide-to="{{ $i }}"
+                    {{ if eq $i 0 }}class="active" aria-current="true"{{ end }}
+                    aria-label="Slide {{ add $i 1 }}"></button>
+                {{ end }}
             </div>
-            {{ end }}
+
+            {{/* slides */}}
+            <div class="carousel-inner">
+                {{ range $i, $slide := .Params.slides }}
+                <div class="carousel-item{{ if eq $i 0 }} active{{ end }}">
+                    <img src="{{ $slide }}" alt="{{ $.Title }} — Slide {{ add $i 1 }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
+                </div>
+                {{ end }}
+            </div>
+
+            {{/* prev/next controls */}}
+            <button class="carousel-control-prev" type="button" data-bs-target="#lpCarousel" data-bs-slide="prev" aria-label="Previous slide">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#lpCarousel" data-bs-slide="next" aria-label="Next slide">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+
         </div>
     </div>
     <span class="lp-slider-counter">{{ len .Params.slides }} Landing Pages</span>

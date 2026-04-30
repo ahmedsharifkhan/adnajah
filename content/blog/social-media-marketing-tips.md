@@ -3,7 +3,7 @@ title: "10 Social Media Marketing Tips That Actually Grow Your Brand"
 slug: "social-media-marketing-tips"
 description: "Practical social media marketing tips that help you build a stronger brand, grow your following, and generate real business results."
 category: "Social Media"
-image: "/assets/images/blog/blog-1-3.png"
+image: "/assets/images/portfolio/Social Medai Post Design (1).jpg"
 date: 2026-03-10
 author: "Ad Najah"
 ---

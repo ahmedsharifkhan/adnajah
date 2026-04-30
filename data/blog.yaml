@@ -1,0 +1,7 @@
+section:
+  tagline: "our news"
+  title: "Recent Blog Posts"
+  button_text: "View All Posts"
+
+home_limit: 3
+list_limit: 6

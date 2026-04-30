@@ -3,7 +3,7 @@ title: "How Meta Ads Can Scale Your Business in 2026"
 slug: "how-meta-ads-scale-your-business"
 description: "Learn how Facebook and Instagram ads can generate consistent leads and sales for your business — and what it takes to run profitable Meta Ads campaigns."
 category: "Paid Ads"
-image: "/assets/images/blog/blog-1-1.png"
+image: "/assets/images/portfolio/meta ads 3.jpeg"
 date: 2026-04-15
 author: "Ad Najah"
 ---
