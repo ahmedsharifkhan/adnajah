@@ -2,7 +2,7 @@
 title: "Best Car Ad Banner"
 slug: "Best-Car-Ad-Creative"
 description: "Creative marketing campaign for modern brands."
-category: "Marketing"
+category: "Creative Design"
 image: "/assets/images/portfolio/car boss.gif"
 date: 2026-03-10
 imgsingle: "/assets/images/portfolio/car boss.gif"

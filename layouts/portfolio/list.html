@@ -17,6 +17,32 @@
 
 <section class="portfolio-six">
     <div class="container">
+
+        <!-- GLASS CATEGORY BUTTONS -->
+        <div class="portfolio-filter-wrap" style="display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap; margin:0 0 45px 0; padding:18px 20px; border-radius:24px; background:rgba(112, 61, 255, 0.08); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(112, 61, 255, 0.20); box-shadow:0 18px 45px rgba(18, 8, 60, 0.08);">
+
+            <button type="button" class="portfolio-filter-btn active" data-filter="all" style="border:none; outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#ffffff; font-size:15px; font-weight:700; background:linear-gradient(135deg, #7b4dff, #4b20e8); box-shadow:0 10px 25px rgba(91, 55, 255, 0.28);">
+                All
+            </button>
+
+            <button type="button" class="portfolio-filter-btn" data-filter="Creative Design" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
+                Creative Design
+            </button>
+
+            <button type="button" class="portfolio-filter-btn" data-filter="Social Media Design" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
+                Social Media Design
+            </button>
+
+            <button type="button" class="portfolio-filter-btn" data-filter="AD Campaign" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
+                AD Campaign
+            </button>
+
+            <button type="button" class="portfolio-filter-btn" data-filter="Video Editing" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
+                Video Editing
+            </button>
+
+        </div>
+
         <div class="row gutter-y-30 masonry-layout">
 
             {{ $limit := site.Params.portfolio_limit | default 12 }}
@@ -24,7 +50,7 @@
 
             {{ range $index, $page := first $limit $pages }}
 
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-6 col-md-6 portfolio-filter-item" data-category="{{ $page.Params.category }}">
                 <div class="portfolio-six__item" style="position:relative; overflow:hidden; border-radius:30px;">
 
                     {{ with $page.Params.imagelist }}
@@ -70,6 +96,45 @@
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".portfolio-filter-btn");
+    const items = document.querySelectorAll(".portfolio-filter-item");
+
+    const activeStyle = "border:none; outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#ffffff; font-size:15px; font-weight:700; background:linear-gradient(135deg, #7b4dff, #4b20e8); box-shadow:0 10px 25px rgba(91, 55, 255, 0.28);";
+
+    const normalStyle = "border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);";
+
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const filter = this.getAttribute("data-filter");
+
+            buttons.forEach(function (btn) {
+                btn.classList.remove("active");
+                btn.setAttribute("style", normalStyle);
+            });
+
+            this.classList.add("active");
+            this.setAttribute("style", activeStyle);
+
+            items.forEach(function (item) {
+                const itemCategory = item.getAttribute("data-category");
+
+                if (filter === "all" || itemCategory === filter) {
+                    item.style.display = "block";
+                    item.style.opacity = "1";
+                    item.style.transform = "scale(1)";
+                } else {
+                    item.style.display = "none";
+                    item.style.opacity = "0";
+                    item.style.transform = "scale(0.96)";
+                }
+            });
+        });
+    });
+});
+</script>
 
 {{ partial "footer.html" . }}
 {{ partial "js.html" . }}
