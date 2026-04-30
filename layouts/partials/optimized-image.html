@@ -1,0 +1,78 @@
+{{ $src := .src | default "" }}
+{{ $alt := .alt | default "" }}
+{{ $class := .class | default "" }}
+{{ $style := .style | default "width:100%; height:auto; display:block;" }}
+{{ $pictureStyle := .pictureStyle | default "display:block; width:100%; height:100%;" }}
+{{ $size := .size | default "900x webp q75" }}
+{{ $mobileSize := .mobileSize | default "600x webp q70" }}
+{{ $loading := .loading | default "lazy" }}
+{{ $priority := .priority | default false }}
+
+{{ $path := replaceRE "^/assets/" "" $src }}
+{{ $path = replaceRE "^assets/" "" $path }}
+
+{{ $isGif := findRE "\\.gif$" (lower $path) }}
+{{ $img := resources.Get $path }}
+
+{{ if $isGif }}
+
+    {{ $webpPath := replaceRE "\\.gif$" ".webp" (lower $path) }}
+    {{ $webp := resources.Get $webpPath }}
+
+    {{ if $webp }}
+        <picture style="{{ $pictureStyle | safeCSS }}">
+            <img
+                src="{{ $webp.RelPermalink }}"
+                alt="{{ $alt }}"
+                class="{{ $class }}"
+                width="{{ $webp.Width }}"
+                height="{{ $webp.Height }}"
+                loading="{{ $loading }}"
+                {{ if $priority }}fetchpriority="high"{{ end }}
+                decoding="async"
+                style="{{ $style | safeCSS }}"
+            >
+        </picture>
+    {{ else }}
+        <img
+            src="{{ $src | relURL }}"
+            alt="{{ $alt }}"
+            class="{{ $class }}"
+            loading="{{ $loading }}"
+            decoding="async"
+            style="{{ $style | safeCSS }}"
+        >
+    {{ end }}
+
+{{ else if $img }}
+
+    {{ $desktop := $img.Resize $size }}
+    {{ $mobile := $img.Resize $mobileSize }}
+
+    <picture style="{{ $pictureStyle | safeCSS }}">
+        <source media="(max-width: 767px)" srcset="{{ $mobile.RelPermalink }}">
+        <img
+            src="{{ $desktop.RelPermalink }}"
+            alt="{{ $alt }}"
+            class="{{ $class }}"
+            width="{{ $desktop.Width }}"
+            height="{{ $desktop.Height }}"
+            loading="{{ $loading }}"
+            {{ if $priority }}fetchpriority="high"{{ end }}
+            decoding="async"
+            style="{{ $style | safeCSS }}"
+        >
+    </picture>
+
+{{ else }}
+
+    <img
+        src="{{ $src | relURL }}"
+        alt="{{ $alt }}"
+        class="{{ $class }}"
+        loading="{{ $loading }}"
+        decoding="async"
+        style="{{ $style | safeCSS }}"
+    >
+
+{{ end }}
