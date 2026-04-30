@@ -2,7 +2,7 @@
 title: "Social Medai Post Design"
 slug: "new-social-media"
 description: "Creative marketing campaign for modern brands."
-category: "AD Campaign"
+category: "Creative Design"
 image: "/assets/images/portfolio/new social media design.jpg"
 date: 2026-03-10
 imgsingle: "/assets/images/portfolio/new social media design 2.gif"

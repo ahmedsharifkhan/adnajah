@@ -2,7 +2,7 @@
 title: "Best Social Media Creative"
 slug: "Creative-Brand-Identity"
 description: "Creative marketing campaign for modern brands."
-category: "Social Media Design"
+category: "Creative Design"
 image: "/assets/images/portfolio/banner1.gif"
 date: 2026-03-10
 imgsingle: "/assets/images/portfolio/banner1.gif."

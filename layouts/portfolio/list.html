@@ -25,21 +25,11 @@
                 All
             </button>
 
-            <button type="button" class="portfolio-filter-btn" data-filter="Creative Design" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
-                Creative Design
+            {{ range site.Data.projects.categories }}
+            <button type="button" class="portfolio-filter-btn" data-filter="{{ .name | urlize }}" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
+                {{ .name }}
             </button>
-
-            <button type="button" class="portfolio-filter-btn" data-filter="Social Media Design" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
-                Social Media Design
-            </button>
-
-            <button type="button" class="portfolio-filter-btn" data-filter="AD Campaign" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
-                AD Campaign
-            </button>
-
-            <button type="button" class="portfolio-filter-btn" data-filter="Video Editing" style="border:1px solid rgba(123, 77, 255, 0.24); outline:none; cursor:pointer; padding:13px 24px; border-radius:999px; color:#26134d; font-size:15px; font-weight:700; background:rgba(255,255,255,0.62); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 10px 25px rgba(18, 8, 60, 0.07);">
-                Video Editing
-            </button>
+            {{ end }}
 
         </div>
 
@@ -50,7 +40,7 @@
 
             {{ range $index, $page := first $limit $pages }}
 
-            <div class="col-lg-6 col-md-6 portfolio-filter-item" data-category="{{ $page.Params.category }}">
+            <div class="col-lg-6 col-md-6 portfolio-filter-item" data-category="{{ $page.Params.category | urlize }}">
                 <div class="portfolio-six__item" style="position:relative; overflow:hidden; border-radius:30px;">
 
                     {{ with $page.Params.imagelist }}
@@ -131,6 +121,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     item.style.transform = "scale(0.96)";
                 }
             });
+
+            setTimeout(function () {
+                if (window.jQuery && jQuery(".masonry-layout").data("masonry")) {
+                    jQuery(".masonry-layout").masonry("layout");
+                }
+            }, 100);
         });
     });
 });

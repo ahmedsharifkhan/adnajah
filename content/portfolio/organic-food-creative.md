@@ -2,7 +2,7 @@
 title: "Organic Food Creative"
 slug: "organic-food-creative"
 description: "Creative marketing campaign for modern brands."
-category: "Video Editing"
+category: "Social Media Design"
 image: "/assets/images/portfolio/honey 1.jpg"
 date: 2026-03-10
 imgsingle: "/assets/images/portfolio/honey 1.jpg"

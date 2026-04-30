@@ -7,3 +7,9 @@ featured:
   - slug: "Creative-Brand-Identity"
   - slug: "Best-Car-Ad-Creative"
   - slug: "new-social-media"
+
+categories:
+  - name: "AD Campaign"
+  - name: "Creative Design"
+  - name: "Social Media Design"
+  # - name: "Video Editing"

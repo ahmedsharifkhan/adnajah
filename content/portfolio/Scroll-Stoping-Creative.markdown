@@ -2,7 +2,7 @@
 title: "Scroll Stoping Creative"
 slug: "Scroll-Stoping-Creative"
 description: "Creative marketing campaign for modern brands."
-category: "Marketing"
+category: "Creative Design"
 image: "/assets/images/portfolio/banner2.gif"
 date: 2026-03-10
 imagelist: "/assets/images/portfolio/banner2.gif"
