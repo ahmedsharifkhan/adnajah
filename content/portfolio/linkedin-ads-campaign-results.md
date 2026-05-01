@@ -5,7 +5,7 @@ description: "B2B LinkedIn Ads campaign generating 762 qualified leads at $42 CP
 category: "AD Campaign"
 image: "/assets/images/portfolio/linkedin-ads-banner.svg"
 imagelist: "/assets/images/portfolio/linkedin-ads-banner.svg"
-imgsingle: "/assets/images/portfolio/linkedin-ad- 1.webp"
+imgsingle: "/assets/images/portfolio/linkedin ads main banner image.png"
 date: 2026-04-02
 client: "SaaS / B2B Company"
 services:
