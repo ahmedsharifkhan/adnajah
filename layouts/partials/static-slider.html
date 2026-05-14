@@ -1,23 +1,55 @@
-﻿<!-- main-slider-start -->
+<!-- main-slider-start -->
+<style>
+.main-banner-three__title {
+  text-transform: none !important;
+  font-size: clamp(36px, 5vw, 68px) !important;
+  line-height: 1.12 !important;
+  color: #1A0B35 !important;
+  padding-left: 0 !important;
+}
+.main-banner-three__title .hero-gradient {
+  background: linear-gradient(135deg, #7B4DFF, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-label {
+  display: inline-block;
+  background: rgba(123,77,255,0.12);
+  color: #7B4DFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(123,77,255,0.28);
+  margin-bottom: 28px;
+}
+.main-banner-three__text {
+  font-size: 17px !important;
+  color: #777799 !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+}
+</style>
         <section class="main-banner-three">
             <div class="main-banner-three__bg" style="background-image: url(assets/images/shapes/main-banner-bg-3.png);"></div><!-- main-banner-three__bg -->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-8">
+                        <span class="hero-label wow fadeInUp" data-wow-delay="0ms">Digital Marketing Agency</span>
                         <h2 class="main-banner-three__title wow fadeInUp" data-wow-delay="10ms">
-                            Results-Driven Digital Marketing Agency
+                            Results-Driven<br><span class="hero-gradient">Digital Marketing</span><br>Agency
                         </h2>
                     </div>
                     <div class="col-lg-4">
                         <div class="main-banner-three__right wow fadeInUp" data-wow-delay="200ms">
                             <p class="main-banner-three__text">
-                                We help businesses grow faster <br> data-driven digital marketing strategies <br>from SEO and paid ads to social media and conversion optimization.
+                                We help businesses grow faster with data-driven digital marketing strategies — from SEO and paid ads to social media and conversion optimization.
                             </p>
                             <div class="main-banner-three__btn wow fadeInUp" data-wow-delay="200ms">
                                 <img src="{{ "/assets/images/shapes/banner-border-2.png" | relURL }}" alt="growim">
-                                <!-- <a class="growim-btn" href="{{ "/services/" | relURL }}">
-                                    <span class="growim-btn__text">Our Services</span>
-                                </a> -->
                             </div>
                         </div>
                     </div>

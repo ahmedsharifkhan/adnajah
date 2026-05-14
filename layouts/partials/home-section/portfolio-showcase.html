@@ -1,0 +1,345 @@
+{{ $pages := where site.RegularPages "Section" "portfolio" }}
+{{ $pages = sort $pages "Date" "desc" }}
+
+<section class="pf-showcase">
+<style>
+.pf-showcase {
+  background: #FFFFFF;
+  padding: 80px 0 70px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Header ── */
+.pf-showcase__header {
+  text-align: center;
+  margin-bottom: 52px;
+  padding: 0 20px;
+}
+.pf-showcase__label {
+  display: inline-block;
+  background: rgba(123,77,255,0.15);
+  color: #9B70FF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(123,77,255,0.30);
+  margin-bottom: 18px;
+}
+.pf-showcase__title {
+  color: #1A0B35;
+  font-size: clamp(26px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  font-family: inherit;
+}
+.pf-showcase__title span {
+  background: linear-gradient(135deg, #9B70FF, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pf-showcase__sub {
+  color: #777799;
+  font-size: 17px;
+  margin: 0;
+}
+
+/* ── Rows wrapper with fade edges ── */
+.pf-showcase__rows {
+  position: relative;
+}
+.pf-showcase__rows::before,
+.pf-showcase__rows::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 160px;
+  z-index: 10;
+  pointer-events: none;
+}
+.pf-showcase__rows::before {
+  left: 0;
+  background: linear-gradient(to right, #FFFFFF 30%, transparent);
+}
+.pf-showcase__rows::after {
+  right: 0;
+  background: linear-gradient(to left, #FFFFFF 30%, transparent);
+}
+
+/* ── Marquee rows ── */
+.pf-row {
+  overflow: hidden;
+  padding: 8px 0;
+}
+.pf-row + .pf-row { margin-top: 16px; }
+
+.pf-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  will-change: transform;
+}
+.pf-track--left  { animation: pf-left  40s linear infinite; }
+.pf-track--right { animation: pf-right 52s linear infinite; }
+
+.pf-row:hover .pf-track { animation-play-state: paused; }
+
+@keyframes pf-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes pf-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ── Card ── */
+.pf-card {
+  display: block;
+  width: 330px;
+  min-width: 330px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid rgba(123,77,255,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  overflow: hidden;
+  text-decoration: none !important;
+  transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.pf-card:hover {
+  border-color: rgba(123,77,255,0.65);
+  transform: translateY(-5px);
+  box-shadow: 0 24px 60px rgba(10,5,40,0.45);
+}
+
+/* Browser chrome bar */
+.pf-chrome {
+  height: 32px;
+  background: #F0EFF8;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 7px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+.pf-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.pf-dot--r { background: #FF5F57; }
+.pf-dot--y { background: #FFBD2E; }
+.pf-dot--g { background: #28C840; }
+.pf-chrome__bar {
+  flex: 1;
+  height: 14px;
+  background: rgba(0,0,0,0.07);
+  border-radius: 999px;
+  margin-left: 4px;
+}
+
+/* Image area — fixed 330×210, always same size */
+.pf-card__img {
+  width: 330px;
+  height: 210px;
+  overflow: hidden;
+  background: #0D0D20;
+  display: block;
+  position: relative;
+}
+.pf-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform .4s ease;
+}
+.pf-card:hover .pf-card__img img {
+  transform: scale(1.04);
+}
+
+/* Card info */
+.pf-card__info {
+  padding: 14px 16px 16px;
+  background: #FFFFFF;
+}
+.pf-card__name {
+  color: #1A0B35;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: inherit;
+}
+.pf-card__cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #888899;
+  font-size: 12px;
+  font-weight: 500;
+}
+.pf-cat-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* ── CTA ── */
+.pf-showcase__cta {
+  text-align: center;
+  margin-top: 52px;
+}
+</style>
+
+<!-- Header -->
+<div class="container">
+  <div class="pf-showcase__header">
+    <span class="pf-showcase__label">Our Selected Work</span>
+    <h2 class="pf-showcase__title">Projects That <span>Deliver Results</span></h2>
+    <p class="pf-showcase__sub">Campaigns, creative design, and digital strategy — built to perform.</p>
+  </div>
+</div>
+
+<div class="pf-showcase__rows">
+
+  <!-- Row 1 → scroll left -->
+  <div class="pf-row">
+    <div class="pf-track pf-track--left">
+
+      {{ range $pages }}
+      {{ $catColor := "#7B4DFF" }}
+      {{ if eq .Params.category "Creative Design" }}{{ $catColor = "#00C2FF" }}{{ end }}
+      {{ if eq .Params.category "Social Media Design" }}{{ $catColor = "#FF3B7A" }}{{ end }}
+      {{ if eq .Params.category "Web Design" }}{{ $catColor = "#34A853" }}{{ end }}
+      <a href="{{ .RelPermalink }}" class="pf-card">
+        <div class="pf-chrome">
+          <span class="pf-dot pf-dot--r"></span>
+          <span class="pf-dot pf-dot--y"></span>
+          <span class="pf-dot pf-dot--g"></span>
+          <span class="pf-chrome__bar"></span>
+        </div>
+        <div class="pf-card__img">
+          <img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}" loading="lazy" width="330" height="210">
+        </div>
+        <div class="pf-card__info">
+          <p class="pf-card__name">{{ .Title }}</p>
+          <span class="pf-card__cat">
+            <span class="pf-cat-dot" style="background:{{ $catColor }};"></span>
+            {{ .Params.category }}
+          </span>
+        </div>
+      </a>
+      {{ end }}
+
+      {{/* Duplicate for seamless loop */}}
+      {{ range $pages }}
+      {{ $catColor := "#7B4DFF" }}
+      {{ if eq .Params.category "Creative Design" }}{{ $catColor = "#00C2FF" }}{{ end }}
+      {{ if eq .Params.category "Social Media Design" }}{{ $catColor = "#FF3B7A" }}{{ end }}
+      {{ if eq .Params.category "Web Design" }}{{ $catColor = "#34A853" }}{{ end }}
+      <a href="{{ .RelPermalink }}" class="pf-card" tabindex="-1" aria-hidden="true">
+        <div class="pf-chrome">
+          <span class="pf-dot pf-dot--r"></span>
+          <span class="pf-dot pf-dot--y"></span>
+          <span class="pf-dot pf-dot--g"></span>
+          <span class="pf-chrome__bar"></span>
+        </div>
+        <div class="pf-card__img">
+          <img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}" loading="lazy" width="330" height="210">
+        </div>
+        <div class="pf-card__info">
+          <p class="pf-card__name">{{ .Title }}</p>
+          <span class="pf-card__cat">
+            <span class="pf-cat-dot" style="background:{{ $catColor }};"></span>
+            {{ .Params.category }}
+          </span>
+        </div>
+      </a>
+      {{ end }}
+
+    </div>
+  </div>
+
+  <!-- Row 2 → scroll right (sorted ascending = different visual order) -->
+  {{ $pages2 := sort $pages "Date" "asc" }}
+  <div class="pf-row">
+    <div class="pf-track pf-track--right">
+
+      {{ range $pages2 }}
+      {{ $catColor := "#7B4DFF" }}
+      {{ if eq .Params.category "Creative Design" }}{{ $catColor = "#00C2FF" }}{{ end }}
+      {{ if eq .Params.category "Social Media Design" }}{{ $catColor = "#FF3B7A" }}{{ end }}
+      {{ if eq .Params.category "Web Design" }}{{ $catColor = "#34A853" }}{{ end }}
+      <a href="{{ .RelPermalink }}" class="pf-card">
+        <div class="pf-chrome">
+          <span class="pf-dot pf-dot--r"></span>
+          <span class="pf-dot pf-dot--y"></span>
+          <span class="pf-dot pf-dot--g"></span>
+          <span class="pf-chrome__bar"></span>
+        </div>
+        <div class="pf-card__img">
+          <img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}" loading="lazy" width="330" height="210">
+        </div>
+        <div class="pf-card__info">
+          <p class="pf-card__name">{{ .Title }}</p>
+          <span class="pf-card__cat">
+            <span class="pf-cat-dot" style="background:{{ $catColor }};"></span>
+            {{ .Params.category }}
+          </span>
+        </div>
+      </a>
+      {{ end }}
+
+      {{/* Duplicate */}}
+      {{ range $pages2 }}
+      {{ $catColor := "#7B4DFF" }}
+      {{ if eq .Params.category "Creative Design" }}{{ $catColor = "#00C2FF" }}{{ end }}
+      {{ if eq .Params.category "Social Media Design" }}{{ $catColor = "#FF3B7A" }}{{ end }}
+      {{ if eq .Params.category "Web Design" }}{{ $catColor = "#34A853" }}{{ end }}
+      <a href="{{ .RelPermalink }}" class="pf-card" tabindex="-1" aria-hidden="true">
+        <div class="pf-chrome">
+          <span class="pf-dot pf-dot--r"></span>
+          <span class="pf-dot pf-dot--y"></span>
+          <span class="pf-dot pf-dot--g"></span>
+          <span class="pf-chrome__bar"></span>
+        </div>
+        <div class="pf-card__img">
+          <img src="{{ .Params.imagelist | relURL }}" alt="{{ .Title }}" loading="lazy" width="330" height="210">
+        </div>
+        <div class="pf-card__info">
+          <p class="pf-card__name">{{ .Title }}</p>
+          <span class="pf-card__cat">
+            <span class="pf-cat-dot" style="background:{{ $catColor }};"></span>
+            {{ .Params.category }}
+          </span>
+        </div>
+      </a>
+      {{ end }}
+
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA Button -->
+<div class="pf-showcase__cta">
+  <a class="growim-btn growim-btn--base" href="/portfolio/">
+    <span class="growim-btn__text">View All Projects</span>
+    <span class="growim-btn__icon"><i class="flaticon-up-right-arrow"></i></span>
+  </a>
+</div>
+
+</section>

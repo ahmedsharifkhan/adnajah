@@ -1,0 +1,355 @@
+<section class="aiv-section">
+<style>
+.aiv-section {
+  background: #FFFFFF;
+  padding: 80px 0 70px;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.aiv__header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.aiv__label {
+  display: inline-block;
+  background: rgba(123,77,255,0.12);
+  color: #7B4DFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(123,77,255,0.28);
+  margin-bottom: 18px;
+}
+.aiv__title {
+  color: #1A0B35;
+  font-size: clamp(26px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  font-family: inherit;
+}
+.aiv__title span {
+  background: linear-gradient(135deg, #7B4DFF, #00C2FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.aiv__sub {
+  color: #777799;
+  font-size: 17px;
+  margin: 0;
+}
+
+/* ── Slider wrapper ── */
+.aiv__outer {
+  position: relative;
+}
+.aiv__wrapper {
+  overflow: hidden;
+  cursor: grab;
+}
+.aiv__wrapper:active { cursor: grabbing; }
+
+.aiv__track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+/* ── Video card ── */
+.aiv-card {
+  flex-shrink: 0;
+  width: 220px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(18,8,60,0.10);
+  border: 1px solid rgba(123,77,255,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.aiv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(18,8,60,0.18);
+}
+
+/* 9:16 video frame */
+.aiv-card__frame {
+  position: relative;
+  width: 220px;
+  height: 390px;
+  background: #0D0D20;
+  overflow: hidden;
+}
+.aiv-card__frame iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: calc(100% + 60px);
+  transform: translateX(-50%);
+  border: none;
+  display: block;
+}
+/* cover YouTube branding bar clipped by overflow:hidden */
+.aiv-card__frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: #0D0D20;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Card footer */
+.aiv-card__foot {
+  padding: 12px 14px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FAFAFF;
+  border-top: 1px solid rgba(123,77,255,0.08);
+}
+.aiv-card__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7B4DFF, #00C2FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.aiv-card__icon svg {
+  width: 14px;
+  height: 14px;
+  fill: #FFFFFF;
+}
+.aiv-card__meta {
+  flex: 1;
+  min-width: 0;
+}
+.aiv-card__name {
+  color: #1A0B35;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.aiv-card__tag {
+  color: #9B70FF;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* ── Navigation ── */
+.aiv__nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 36px;
+}
+.aiv__btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(123,77,255,0.30);
+  background: #FFFFFF;
+  color: #7B4DFF;
+  font-size: 22px;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.2s;
+  line-height: 1;
+}
+.aiv__btn:hover,
+.aiv__btn--active {
+  background: linear-gradient(135deg, #7B4DFF, #5533CC);
+  border-color: #7B4DFF;
+  color: #FFFFFF;
+  transform: scale(1.07);
+}
+.aiv__btn:disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+</style>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="aiv__header">
+    <span class="aiv__label">AI Video Content</span>
+    <h2 class="aiv__title">Creative Videos That <span>Convert</span></h2>
+    <p class="aiv__sub">AI-powered ad videos crafted to capture attention, tell stories, and drive real results.</p>
+  </div>
+
+  <!-- Slider -->
+  <div class="aiv__outer">
+    <div class="aiv__wrapper" id="aivWrapper">
+      <div class="aiv__track" id="aivTrack">
+
+        <!-- Video 1 -->
+        <div class="aiv-card">
+          <div class="aiv-card__frame">
+            <iframe src="https://www.youtube.com/embed/A3jaY9eMjGo?autoplay=1&mute=1&loop=1&playlist=A3jaY9eMjGo&rel=0&playsinline=1"
+              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="aiv-card__foot">
+            <div class="aiv-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="aiv-card__meta">
+              <p class="aiv-card__name">AI Ad Creative</p>
+              <span class="aiv-card__tag">Ad Najah Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="aiv-card">
+          <div class="aiv-card__frame">
+            <iframe src="https://www.youtube.com/embed/vZF_kwmesos?autoplay=1&mute=1&loop=1&playlist=vZF_kwmesos&rel=0&playsinline=1"
+              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="aiv-card__foot">
+            <div class="aiv-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="aiv-card__meta">
+              <p class="aiv-card__name">AI Ad Creative</p>
+              <span class="aiv-card__tag">Ad Najah Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="aiv-card">
+          <div class="aiv-card__frame">
+            <iframe src="https://www.youtube.com/embed/2dOWSDrU_sk?autoplay=1&mute=1&loop=1&playlist=2dOWSDrU_sk&rel=0&playsinline=1"
+              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="aiv-card__foot">
+            <div class="aiv-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="aiv-card__meta">
+              <p class="aiv-card__name">AI Ad Creative</p>
+              <span class="aiv-card__tag">Ad Najah Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="aiv-card">
+          <div class="aiv-card__frame">
+            <iframe src="https://www.youtube.com/embed/6DTDTcu2sVM?autoplay=1&mute=1&loop=1&playlist=6DTDTcu2sVM&rel=0&playsinline=1"
+              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="aiv-card__foot">
+            <div class="aiv-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="aiv-card__meta">
+              <p class="aiv-card__name">AI Ad Creative</p>
+              <span class="aiv-card__tag">Ad Najah Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="aiv-card">
+          <div class="aiv-card__frame">
+            <iframe src="https://www.youtube.com/embed/gPZ5_Agc3zQ?autoplay=1&mute=1&loop=1&playlist=gPZ5_Agc3zQ&rel=0&playsinline=1"
+              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="aiv-card__foot">
+            <div class="aiv-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="aiv-card__meta">
+              <p class="aiv-card__name">AI Ad Creative</p>
+              <span class="aiv-card__tag">Ad Najah Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="aiv-card">
+          <div class="aiv-card__frame">
+            <iframe src="https://www.youtube.com/embed/9NuJ4GCM4J0?autoplay=1&mute=1&loop=1&playlist=9NuJ4GCM4J0&rel=0&playsinline=1"
+              allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="aiv-card__foot">
+            <div class="aiv-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="aiv-card__meta">
+              <p class="aiv-card__name">AI Ad Creative</p>
+              <span class="aiv-card__tag">Ad Najah Studio</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /track -->
+    </div><!-- /wrapper -->
+
+    <!-- Navigation arrows -->
+    <div class="aiv__nav">
+      <button type="button" class="aiv__btn" id="aivPrev" aria-label="Previous" disabled>&#8592;</button>
+      <button type="button" class="aiv__btn aiv__btn--active" id="aivNext" aria-label="Next">&#8594;</button>
+    </div>
+
+  </div><!-- /outer -->
+</div><!-- /container -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var track   = document.getElementById('aivTrack');
+  var wrapper = document.getElementById('aivWrapper');
+  var btnPrev = document.getElementById('aivPrev');
+  var btnNext = document.getElementById('aivNext');
+  if (!track || !wrapper || !btnPrev || !btnNext) return;
+
+  var CARD_W  = 220;
+  var GAP     = 20;
+  var STEP    = CARD_W + GAP;
+  var current = 0;
+  var total   = track.querySelectorAll('.aiv-card').length;
+
+  function getMax() {
+    var w = wrapper.offsetWidth || window.innerWidth;
+    var visible = Math.max(1, Math.floor(w / STEP));
+    return Math.max(0, total - visible);
+  }
+
+  function update() {
+    var max = getMax();
+    current = Math.min(Math.max(current, 0), max);
+    track.style.transform = 'translateX(-' + (current * STEP) + 'px)';
+    btnPrev.disabled = current <= 0;
+    btnNext.disabled = current >= max;
+    btnPrev.classList.toggle('aiv__btn--active', current > 0);
+    btnNext.classList.toggle('aiv__btn--active', current < max);
+  }
+
+  btnNext.addEventListener('click', function() { current++; update(); });
+  btnPrev.addEventListener('click', function() { current--; update(); });
+  window.addEventListener('resize', update);
+
+  update();
+});
+</script>
+</section>
